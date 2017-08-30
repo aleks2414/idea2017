@@ -1,0 +1,311 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+@font-face{
+font-family:"Gibson";
+  src:asset-url("gibson-regular.ttf") format("typefont");
+font-family:"Gibson_thin";
+  src:asset-url("gibson-light.ttf") format("typefont");
+font-family:"Gibson_bold";
+  src:asset-url("gibson-semibold.ttf") format("typefont");
+}
+
+@font-face{
+	font-family:"Proxima_Nova";
+  src:asset-url("Proxima_Nova.ttf") format("typefont");
+}
+
+$light_red: #031f3c;
+$red: #e13b8d;
+$grey: #CCCCCB;
+$back: #f6f6f6;
+
+
+body {
+font-family: 'Gibson_thin', sans-serif;
+-webkit-font-smoothing: antialiased;
+background-color: $back;
+color: $red;
+text-rendering: optimizeLegibility;
+}
+
+.logo {
+	text-align: center;
+	padding: 1rem;
+  img {
+  width: 155px;
+}
+}
+
+#nav {
+	text-transform: uppercase !important;
+	text-align: center;
+	a {
+	font-family: 'Proxima_Nova', sans-serif;
+	font-size: 14px;
+	color: #555;
+	
+	span {
+		color: $red;
+		font-size: 19px;
+	}
+}
+}
+
+#magic {
+	margin: 0;
+	background-color: white;
+  border-radius: 1px;
+  border: solid 1px #e2e8ea;
+  -webkit-box-shadow: 6px 6px 2px rgba(46,133,155,0.04);
+  box-shadow: 6px 6px 2px rgba(46,133,155,0.04);
+}
+
+p, a {
+	color: #6A6C6C;
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: $red;
+  }
+}
+
+
+.button {
+  transition: background-color .15s linear;
+  font-size: 15px;
+  min-width: 120px;
+  border-radius: 4px;
+  padding: 5px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-top: .2rem;
+  background-color: transparent;
+  font-weight: 900;
+}
+
+.button_red {
+  color: white !important;
+  background-color: $red;
+  border: solid 2px $red;
+  &:hover {
+    color: $red !important;
+    background-color: transparent;
+  }
+
+  &:hover > a {
+  color: white;
+  background-color: $red;
+  }
+}
+
+
+.button_red {
+  color: white !important;
+  background-color: $red;
+  border: solid 2px $red;
+  &:hover {
+    color: $red !important;
+    background-color: transparent;
+  }
+
+  &:hover > a {
+  color: white;
+  background-color: $red;
+  }
+}
+
+.button_red2 {
+  color: $red;
+  background-color: transparent;
+  border: solid 2px $red;
+  &:hover {
+    color: white !important;
+    background-color: $red;
+  }
+
+  &:hover > a {
+  color: white;
+  background-color: $red;
+  }
+}
+
+.button_block {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.center {
+  text-align: center;
+}
+
+
+input[type="url"],input[type="date"],input[type="name"], input[type="email"], input[type="textbox"], input[type="number"], input[type="tel"], input[type="text"], input[type="password"], textarea, select {
+  width: 100%;
+  height: 3.5rem;
+  border:none;
+  border-bottom:1.3px solid #dadada;
+  margin-bottom: 1.5rem;
+  background-color: white !important;
+  }
+
+  textarea {
+    height: 20rem !important;
+  }
+
+  label {
+  margin-top: 1rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #dadada;
+}
+
+
+.pagination {
+    font-size: 12px;
+}
+
+.pagination > * {
+    margin-right: 0.1em;
+    padding: 0.3em 0.4em;
+}
+
+.pagination a:hover {
+    background: $red none repeat scroll 0 0;
+    color: white;
+}
+
+.pagination a:active {
+    text-shadow: none;
+}
+
+.pagination .current {
+    background: $red none repeat scroll 0 0;
+    color: white;
+}
+
+.pagination .disabled {
+    color: #C0C0C0;
+}
+
+
+ #banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 1rem;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: #f6f6f6;
+  margin: 0
+}
+
+.cover_home {
+  background-image: image-url("innova_cover2.jpg");
+  height: 75vh;
+}
+
+.typed2 {
+	color: white;
+	text-transform: uppercase;
+	font-size: 110px;
+	color: #222;
+	margin: 0px;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.typed {
+	color: #555;
+	
+	font-size: 3.2rem;
+	margin: 0px;
+  font-weight: 300;
+  letter-spacing: 100;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+@media (max-width: 800px)
+{
+
+#banner {
+background-attachment: unset;
+}
+
+.typed2 {
+	font-size: 80px;
+}
+
+.typed {
+	font-size: 30px;
+}
+}
+
+#fondo {
+  .img2 {
+    img {
+      position: fixed;
+      top: -7%;
+      right: 12%;
+    }
+  }
+
+  .img3 {
+    img {
+      position: fixed;
+      top: -6%;
+      left: 12%;
+    }
+  }
+
+  .img4 {
+    img {
+      position: fixed;
+      top: 70%;
+      left: -1%;
+    }
+  }
+
+  .img5 {
+    img {
+      position: fixed;
+      top: 50%;
+      right: 5%;
+    }
+  }
+}
+
