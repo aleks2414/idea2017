@@ -13,9 +13,9 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
+@import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import url('https://fonts.googleapis.com/css?family=Kalam');
 
 @font-face{
 font-family:"Gibson";
@@ -31,11 +31,13 @@ font-family:"Gibson_bold";
   src:asset-url("Proxima_Nova.ttf") format("typefont");
 }
 
+
+
 $light_red: #031f3c;
 $red: #e13b8d;
 $grey: #CCCCCB;
 $back: #f6f6f6;
-
+$blue: #0099ff;
 
 body {
 font-family: 'Gibson_thin', sans-serif;
@@ -63,8 +65,11 @@ text-rendering: optimizeLegibility;
 	
 	span {
 		color: $red;
-		font-size: 19px;
+		font-size: 15px;
 	}
+  .two {
+      color: white !important;
+    }
 }
 }
 
@@ -221,18 +226,35 @@ input[type="url"],input[type="date"],input[type="name"], input[type="email"], in
   background-position: center center;
   margin-bottom: 1rem;
   background-attachment: fixed;
-  background-blend-mode: multiply;
-  background-color: #f6f6f6;
-  margin: 0
+  /*background-blend-mode: multiply;*/
+  margin: 0;
+   -webkit-clip-path: polygon(0 0, 1600px 0, 1600px 72%, 0 100%);
+  clip-path: polygon(0 0, 1600px 0, 1600px 72%, 0 100%);
+
 }
 
 .cover_home {
   background-image: image-url("innova_cover2.jpg");
   height: 75vh;
+
+/*    &:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  left: 15px;*/
+   /* background: $red; /* For browsers that do not support gradients */    
+    /*background: -webkit-linear-gradient(left top, $red, $blue); /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(bottom right, $red, $blue); /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(bottom right, $red, $blue); /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(to bottom right, $red, $blue);  Standard syntax (must be last) */
+  /*opacity: .6; */
+  /*}*/
 }
 
 .typed2 {
-	color: white;
+  text-align: center;
 	text-transform: uppercase;
 	font-size: 110px;
 	color: #222;
@@ -247,7 +269,7 @@ input[type="url"],input[type="date"],input[type="name"], input[type="email"], in
 
 .typed {
 	color: #555;
-	
+	text-transform: uppercase;
 	font-size: 3.2rem;
 	margin: 0px;
   font-weight: 300;
@@ -309,3 +331,74 @@ background-attachment: unset;
   }
 }
 
+hr {
+  border-width: 2px;
+  max-width: 70px;
+}
+hr.light {
+  border-color: white;
+}
+
+hr.red {
+  border-color: $red;
+}
+
+#texto {
+  margin: 50px 0;
+  h1 {
+    color: #555;
+    text-align: center;
+    font-size: 25px;
+    strong {
+      font-size: 70px;
+      color: $blue;
+      font-family: 'Kalam', cursive;
+    }
+  }
+}
+
+
+
+#rocko {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-top: solid 2px #f6f6f6; 
+  padding: 20px 0;
+
+.imagen {
+img {
+-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+width: 100%;
+}
+}
+
+.imagen2 {
+img {
+-webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+width: 100%;
+}
+}
+
+.der {
+  text-align: right;
+}
+
+h3 {
+  color: $red;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+h5 {
+  color: #a7a7a7;
+  font-size: 15px;
+}
+
+span {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+}
