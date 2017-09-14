@@ -1,386 +1,371 @@
-$light_blue: #031f3c;
-$red: #e13b8d;
-$grey: #CCCCCB;
-$back: #f6f6f6;
-$blue: #0099ff;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-.rm-nav ul,
-.rm-menu {
-    background-color: transparent;
-    margin-top: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-/* Required styles =========================================================== */
 
-/* Add clearfix to nav element container*/
-.rm-container:after {
-    content: " ";
+/* -------------------------------- 
+
+1. Auto-Hiding Navigation - Simple
+
+-------------------------------- */
+.cd-auto-hide-header {
+  
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+
+}
+.cd-auto-hide-header::after {
+  clear: both;
+  content: "";
+  display: block;
+
+}
+.cd-auto-hide-header.is-hidden {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+@media only screen and (min-width: 1024px) {
+  .cd-auto-hide-header {
+    height: 80px;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.15) !important;
+    
+  }
+}
+
+.cd-auto-hide-header .logo,
+.cd-auto-hide-header .nav-trigger {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.cd-auto-hide-header .logo {
+  left: 5%;
+}
+.cd-auto-hide-header .logo a, .cd-auto-hide-header .logo img {
+  display: block;
+}
+
+.cd-auto-hide-header .nav-trigger {
+  /* vertically align its content */
+  display: table;
+  height: 100%;
+  padding: 0 1em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #25283D;
+  font-weight: bold;
+  right: 0;
+  border-left: 1px solid #f2f2f2;
+}
+.cd-auto-hide-header .nav-trigger span {
+  /* vertically align inside parent element */
+  display: table-cell;
+  vertical-align: middle;
+}
+.cd-auto-hide-header .nav-trigger em, .cd-auto-hide-header .nav-trigger em::after, .cd-auto-hide-header .nav-trigger em::before {
+  /* this is the menu icon */
+  display: block;
+  position: relative;
+  height: 2px;
+  width: 22px;
+  background-color: #25283D;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.cd-auto-hide-header .nav-trigger em {
+  /* this is the menu central line */
+  margin: 6px auto 14px;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+.cd-auto-hide-header .nav-trigger em::before, .cd-auto-hide-header .nav-trigger em::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+.cd-auto-hide-header .nav-trigger em::before {
+  /* this is the menu icon top line */
+  -webkit-transform: translateY(-6px);
+      -ms-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+.cd-auto-hide-header .nav-trigger em::after {
+  /* this is the menu icon bottom line */
+  -webkit-transform: translateY(6px);
+      -ms-transform: translateY(6px);
+          transform: translateY(6px);
+}
+@media only screen and (min-width: 1024px) {
+  .cd-auto-hide-header .nav-trigger {
+    display: none;
+  }
+}
+
+.cd-auto-hide-header.nav-open .nav-trigger em {
+  /* transform menu icon into a 'X' icon */
+  background-color: rgba(255, 255, 255, 0);
+}
+.cd-auto-hide-header.nav-open .nav-trigger em::before {
+  /* rotate top line */
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.cd-auto-hide-header.nav-open .nav-trigger em::after {
+  /* rotate bottom line */
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.cd-primary-nav {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  padding-right: 5%;
+  
+}
+.cd-primary-nav > ul {
+  position: absolute;
+  z-index: 2;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: none;
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.2);
+}
+.cd-primary-nav > ul a {
+  /* target primary-nav links */
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 5%;
+  color: #25283D;
+  font-size: 1.8rem;
+  border-top: 1px solid #f2f2f2;
+}
+.cd-primary-nav > ul a:hover, .cd-primary-nav > ul a.active {
+  color: #8F3985;
+}
+@media only screen and (min-width: 1024px) {
+  .cd-primary-nav {
+    /* vertically align its content */
     display: table;
-    clear: both;
-}
-
-/* Toggle Link styles */
-.rm-toggle {
-    display:  none;
-    float: right;
-    padding: 0 .75em;
-    margin: 1em;
-    height: 2em;
-    line-height: 2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: $red;
-}
-.rm-toggle.rm-show {
-    display: inline-block;
-}
-
-/* Toggle Button styles */
-.rm-toggle.rm-button {
-    /* Use data uri */
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAYAAABB7B6eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1NjU2N0Q1RTNBMkZFMjExQTlCNjg5QjQzQTBGRDY1QSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MkIzMDBDNTJGODIxMUUyOTgzN0ExQ0FEREZERTE4MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MkIzMDBDNDJGODIxMUUyOTgzN0ExQ0FEREZERTE4MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU3NTY3RDVFM0EyRkUyMTFBOUI2ODlCNDNBMEZENjVBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU2NTY3RDVFM0EyRkUyMTFBOUI2ODlCNDNBMEZENjVBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+S+feugAAAFtJREFUeNpi/P//PwMtAeOQt4AFjU8V2xgZGXmA1E8g/oPuA2pZoAykXgLxVxQLgBLcQEociHkotOMLLgtAQcaOJehIBX+wBhHQApqnotFIHo3k0UgeipEMEGAADaRXEC7WAy0AAAAASUVORK5CYII=);
-    /* Or use png */
-    /*background-image:url(menu-btn.png);*/
-	background-repeat:no-repeat;
-	background-position:center center;
-    padding: 0;
-	width: 2.5em;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-/* Menu Container Element */
-.rm-nav {
-    clear: both;
-}
-
-/* Menu Element */
-.rm-nav > ul,
-.rm-top-menu {
-    clear: both;
-    list-style: none;
-    padding: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-    zoom: 1;
-}
-
-/* Menu & Sub Menu Items */
-.rm-nav li,
-.rm-menu-item {
+  }
+  .cd-primary-nav > ul {
+    /* vertically align inside parent element */
+    display: table-cell;
+    vertical-align: middle;
+    /* reset mobile style */
     position: relative;
-}
-.rm-nav > ul > .rm-last,
-.rm-top-menu > .rm-last {
-    margin-bottom: 1em;
-}
-.rm-nav li a,
-.rm-menu-item a {
-    padding: .75em 1em;
-    display: block;
-    position: relative;
-    color:#e6e6e6;
-    text-decoration: none;
-}
-
-/* Sub Menus */
-.rm-nav li ul,
-.rm-menu-item .rm-menu {
-    width: 100%;
-    padding:0;
-    margin-left: 0;
-    list-style: none;
-    background-color: $blue;
-    z-index: 500;
-    zoom: 1;
-
-}
-.rm-nav .rm-hover ul,
-.rm-nav .rm-hover .rm-menu {
-    z-index: 600;
-}
-
-/* Sub Menu Items */
-.rm-nav li li a,
-.rm-menu-item .rm-menu-item a {
-    z-index:500;
-    padding-left: 2em;
-    color: white !important;
-
-}
-.rm-nav li li.rm-last a,
-.rm-menu-item .rm-menu-item.rm-last a {
-    padding-bottom: 1em;
-}
-.rm-nav li li ul,
-.rm-menu-item .rm-menu-item .rm-menu {
-    position: static;
-}
-
-.rm-nav li li li a,
-.rm-menu-item .rm-menu-item .rm-menu-item a {
-    z-index:600;
-    padding-left: 3em;
-    color: white !important;
-}
-
-/* CSS Animations ============================================================= */
-.rm-accelerate {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    -webkit-backface-visibility:hidden;
-    -webkit-perspective: 1000;
-}
-.rm-css-animate {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-}
-.rm-css-animate.rm-menu-expanded {
-    overflow: visible;
-}
-
-/* Theme styles ============================================================= */
-
-.rm-nav a {
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-}
-
-.rm-toggle:hover,
-.rm-toggle:focus {
-    background-color: $red;
-    outline: none;
-}
-
-.rm-lighten li li a,
-.rm-lighten li a:focus,
-.rm-lighten li a:hover,
-.rm-lighten li.rm-hover a,
-.rm-lighten .rm-menu-item .rm-menu-item a,
-.rm-lighten .rm-menu-item a:focus,
-.rm-lighten .rm-menu-item a:hover,
-.rm-lighten .rm-menu-item.rm-hover > a {
-    background-color: rgb(32, 32, 32); /* fallback */
-    background-color: rgba(255, 255, 255, .1);
-    outline: none;
-}
-
-.rm-lighten li li li a,
-.rm-lighten li li a:focus,
-.rm-lighten li li a:hover,
-.rm-lighten li li.rm-hover a,
-.rm-lighten .rm-menu-expanded li a:focus,
-.rm-lighten .rm-menu-expanded li a:hover,
-.rm-lighten .rm-menu-item .rm-menu-item .rm-menu-item a,
-.rm-lighten .rm-menu-item .rm-menu-item a:focus,
-.rm-lighten .rm-menu-item .rm-menu-item a:hover,
-.rm-lighten .rm-menu-item .rm-menu-item.rm-hover a,
-.rm-lighten .rm-menu-expanded li a:focus,
-.rm-lighten .rm-menu-expanded li a:hover {
-    background-color: rgb(96, 96, 96); /* fallback */
-    background-color: rgba(255, 255, 255, .2);
-}
-
-.rm-lighten li li li a:focus,
-.rm-lighten li li li a:hover,
-.rm-lighten li li li.rm-hover a,
-.rm-lighten li .rm-menu-expanded a:focus,
-.rm-lighten li .rm-menu-expanded a:hover,
-.rm-lighten .rm-menu-item .rm-menu-item .rm-menu-item a:focus,
-.rm-lighten .rm-menu-item .rm-menu-item .rm-menu-item a:hover,
-.rm-lighten .rm-menu-item .rm-menu-item .rm-menu-item.rm-hover a,
-.rm-lighten .rm-menu-item .rm-menu-expanded a:focus,
-.rm-lighten .rm-menu-item .rm-menu-expanded a:hover {
-    background-color: rgb(128, 128, 128); /* fallback */
-    background-color: rgba(255, 255, 255, .3);
-}
-
-.rm-darken li li a,
-.rm-darken li a:focus,
-.rm-darken li a:hover,
-.rm-darken li.rm-hover a,
-.rm-darken .rm-menu-item .rm-menu-item a,
-.rm-darken .rm-menu-item a:focus,
-.rm-darken .rm-menu-item a:hover,
-.rm-darken .rm-menu-item.rm-hover > a {
-    background-color: rgb(192, 192, 192); /* fallback */
-    background-color: rgba(0, 0, 0, .1);
-    outline: none;
-}
-
-.rm-darken li li li a,
-.rm-darken li li a:focus,
-.rm-darken li li a:hover,
-.rm-darken li li.rm-hover a,
-.rm-darken .rm-menu-expanded li a:focus,
-.rm-darken .rm-menu-expanded li a:hover,
-.rm-darken .rm-menu-item .rm-menu-item .rm-menu-item a,
-.rm-darken .rm-menu-item .rm-menu-item a:focus,
-.rm-darken .rm-menu-item .rm-menu-item a:hover,
-.rm-darken .rm-menu-item .rm-menu-item.rm-hover a,
-.rm-darken .rm-menu-expanded li a:focus,
-.rm-darken .rm-menu-expanded li a:hover {
-    background-color: rgb(160, 160, 160); /* fallback */
-    background-color: rgba(0, 0, 0, .2);
-}
-.rm-darken li li li a:focus,
-.rm-darken li li li a:hover,
-.rm-darken li li li.rm-hover a,
-.rm-darken li .rm-menu-expanded a:focus,
-.rm-darken li .rm-menu-expanded a:hover,
-.rm-darken .rm-menu-item .rm-menu-item .rm-menu-item a:focus,
-.rm-darken .rm-menu-item .rm-menu-item .rm-menu-item a:hover,
-.rm-darken .rm-menu-item .rm-menu-item .rm-menu-item.rm-hover a,
-.rm-darken .rm-menu-item .rm-menu-expanded a:focus,
-.rm-darken .rm-menu-item .rm-menu-expanded a:hover {
-    background-color: rgb(128, 128, 128); /* fallback */
-    background-color: rgba(0, 0, 0, .3);
-}
-
-/* Expanded Layout styles - .rm-layout-expanded class is applied by plugin ========= */
-
-.rm-layout-expanded .rm-nav > ul,
-.rm-layout-expanded .rm-top-menu {
-    margin-bottom: 0;
-}
-
-.rm-layout-expanded .rm-nav > ul > li,
-.rm-layout-expanded .rm-top-menu > .rm-menu-item {
-    display: inline-block;
-}
-.rm-layout-expanded .rm-nav > ul > .rm-last,
-.rm-layout-expanded .rm-top-menu > .rm-last {
-    margin-bottom: 0;
-}
-.rm-layout-expanded .rm-nav > ul > li > a,
-.rm-layout-expanded .rm-top-menu > .rm-menu-item > a {
-    height: 3em;
-    line-height: 3em; /* match with height to center vertically */
-    padding-top: 0;
-    padding-bottom: 0;
-}
-.rm-layout-expanded li ul,
-.rm-layout-expanded .rm-menu-item .rm-menu {
-    width: 15em;
-    position: absolute;
-    left: 0;
-}
-.rm-layout-expanded li.rm-last ul,
-.rm-layout-expanded .rm-menu-item.rm-last .rm-menu,
-.rm-layout-expanded li.rm-2nd-last ul,
-.rm-layout-expanded .rm-menu-item.rm-2nd-last .rm-menu {
-    left: auto;
-    right: 0;
-}
-.rm-layout-expanded li li ul,
-.rm-layout-expanded .rm-menu-item .rm-menu-item .rm-menu {
-    position: absolute;
-    left: 100%;
+    width: auto;
     top: 0;
-}
-.rm-layout-expanded li li.rm-last ul,
-.rm-layout-expanded .rm-menu-item .rm-menu-item.rm-last .rm-menu,
-.rm-layout-expanded li li.rm-2nd-last ul,
-.rm-layout-expanded .rm-menu-item .rm-menu-item.rm-2nd-last .rm-menu{
-    right: 100%;
-    left: auto;
-}
-.rm-layout-expanded li a,
-.rm-layout-expanded li li a,
-.rm-layout-expanded li li li a,
-.rm-layout-expanded .rm-menu-item a,
-.rm-layout-expanded .rm-menu-item .rm-menu-item a,
-.rm-layout-expanded .rm-menu-item .rm-menu-item .rm-menu-item a {
-    padding-left: 1em;
-}
-
-/* clearfix */
-.rm-layout-expanded .rm-nav > ul:before,
-.rm-layout-expanded .rm-nav > ul:after,
-.rm-layout-expanded .rm-top-menu:before,
-.rm-layout-expanded .rm-top-menu:after {
-    content: " ";
-    display: table;
-}
-.rm-layout-expanded .rm-nav > ul:after,
-.rm-layout-expanded .rm-top-menu:after {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .cd-primary-nav > ul::after {
     clear: both;
-}
-
-/* No JS Styles ============================================================= */
-
-/* Hide Sub Menus */
-.no-js .rm-nav li ul,
-.rm-nojs li ul,
-.no-js .rm-nav .rm-menu-item .rm-menu,
-.rm-nojs .rm-menu-item .rm-menu {
-    position: absolute;
-    left: -999em;
-}
-.rm-toggle.rm-nojs {
+    content: "";
+    display: block;
+  }
+  .cd-primary-nav > ul li {
     display: inline-block;
-    visibility: hidden;
+    float: left;
+    margin-right: 1.5em;
+  }
+  .cd-primary-nav > ul li:last-of-type {
+    margin-right: 0;
+  }
+  .cd-primary-nav > ul a {
+    /* reset mobile style */
+    height: auto;
+    line-height: normal;
+    padding: 0;
+    border: none;
+  }
 }
 
-/* Expanded layout if JS not supported */
-/* Note: The min-width value here should match minWidth value set in JS */
-@media screen and ( min-width: 769px ) {
-
-    .rm-nojs > ul > li,
-    .no-js .rm-nav > ul > li,
-    .rm-nojs > .rm-menu > .rm-menu-item,
-    .no-js .rm-nav > .rm-menu > .rm-menu-item {
-        float: left;
-    }
-
-    .rm-nojs li a,
-    .no-js .rm-nav li a,
-    .rm-nojs .rm-menu-item a,
-    .no-js .rm-nav .rm-menu-item a {
-        padding-left: 1em;
-    }
-
-    /* clearfix */
-    .rm-nojs > ul:before,
-    .rm-nojs > ul:after,
-    .no-js .rm-nav > ul:before,
-    .no-js .rm-nav > ul:after,
-    .rm-nojs > .rm-menu:before,
-    .rm-nojs > .rm-menu:after,
-    .no-js .rm-nav > .rm-menu:before,
-    .no-js .rm-nav > .rm-menu:after{
-        content: " ";
-        display: table;
-    }
-    .rm-nojs > ul:after,
-    .no-js .rm-nav > ul:after,
-    .rm-nojs > .rm-menu:after,
-    .no-js .rm-nav > .rm-menu:after {
-        clear: both;
-    }
-    .rm-toggle.rm-nojs {
-        display: none;
-    }
+.nav-open .cd-primary-nav ul,
+.cd-primary-nav ul:target {
+  /* 
+    show primary nav - mobile only 
+    :target is used to show navigation on no-js devices
+  */
+  display: block;
+}
+@media only screen and (min-width: 1024px) {
+  .nav-open .cd-primary-nav ul,
+  .cd-primary-nav ul:target {
+    display: table-cell;
+  }
 }
 
-/* Calculation Styles ============================================================
- * Applied and removed by jQuery during menu height calculations
- */
+/* -------------------------------- 
 
-.rm-calculate {
-    position: absolute !important;
-    max-height: none !important;
-    overflow: visible !important;
+2. Auto-Hiding Navigation - with Sub Nav
+
+-------------------------------- */
+.cd-secondary-nav {
+  position: relative;
+  z-index: 1;
+  clear: both;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.15) !important;
 }
-.rm-layout-contracted .rm-calculate {
-    width: 100% !important;
+.cd-secondary-nav::after {
+  /* gradient on the right - to indicate it's possible to scroll */
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 35px;
+  background: transparent;
+  pointer-events: none;
 }
-
-/* Accessibility ============================================================ */
-
-.rm-container .accessibly-hidden {
-    position: absolute;
-    left: -999em;
+.cd-secondary-nav.nav-end::after {
+  opacity: 0;
+}
+.cd-secondary-nav ul, .cd-secondary-nav li, .cd-secondary-nav a {
+  height: 100%;
+}
+.cd-secondary-nav ul {
+  /* enables a flex context for all its direct children */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.cd-secondary-nav ul::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.cd-secondary-nav li {
+  display: inline-block;
+  float: right;
+  /* do not shrink - elements float on the right of the element */
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+.cd-secondary-nav li:last-of-type {
+  padding-right: 20px;
+}
+.cd-secondary-nav a {
+  display: block;
+  color: #ffffff;
+  opacity: .6;
+  line-height: 50px;
+  padding: 0 1em;
+}
+.cd-secondary-nav a:hover, .cd-secondary-nav a.active {
+  opacity: 1;
+}
+@media only screen and (min-width: 1024px) {
+  .cd-secondary-nav {
+    height: 50px;
+    overflow: visible;
+  }
+  .cd-secondary-nav ul {
+    /* reset mobile style */
+    display: block;
+    text-align: right;
+  }
+  .cd-secondary-nav li {
+    /* reset mobile style */
+    float: none;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+  }
+  .cd-secondary-nav a {
+    line-height: 50px;
+  }
+  .cd-secondary-nav a.active {
+    box-shadow: inset 0 -3px #8F3985;
+  }
 }

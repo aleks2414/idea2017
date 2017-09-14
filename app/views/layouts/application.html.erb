@@ -11,169 +11,167 @@
 <body>
 
 
-<div id="fondo">
-<div class="hidden-xs">
-<span class="img2"><%= image_tag ("iconos-01.png")%></span>
-<span class="img3"><%= image_tag ("iconos-02.png")%></span>
-<span class="img4"><%= image_tag ("iconos-03.png")%></span>
-<span class="img5"><%= image_tag ("iconos-04.png")%></span>
-</div>
-</div>
-			
+<div id="head">
+<header class="cd-auto-hide-header">
+    <div class="logo"><a href="<%= root_path %>"><%= image_tag ("logo.svg")%></a></div>
 
+    <nav class="cd-primary-nav">
+        <a href="#cd-navigation" class="nav-trigger">
+            <span>
+                <em aria-hidden="true"></em>
+                <!-- Menu -->
+            </span>
+        </a> <!-- .nav-trigger -->
 
-<div id="nav">
-<header>
+        <ul id="cd-navigation">
+            <li class="<%= 'active' if current_page?(proyectos_de_innovacion_path) or  current_page?(proyectos_de_innovacion_comerciales_path) or  current_page?(proyectos_de_innovacion_innovacion_path) or  current_page?(proyectos_de_innovacion_transformacion_digital_path) or  current_page?(proyectos_de_innovacion_gestion_del_talento_path) %> hidden-sm hidden-xs"><a href="<%= proyectos_de_innovacion_path %>">Proyectos</a></li>
+            <li class="<%= 'active' if current_page?(academy_path) %> hidden-sm hidden-xs"><a href="<%= academy_path %>">Academy</a></li>
+            <li class="<%= 'active' if current_page?(nosotros_path) or current_page?(nosotros_equipo_path) or current_page?(nosotros_casos_de_exito_path) or current_page?(nosotros_herramientas_path) %> hidden-sm hidden-xs"><a href="<%= nosotros_path %>">Idearia</a></li>
+            <li class="hidden-sm hidden-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
+            <li class="<%= 'active' if current_page?(proyectos_de_innovacion_path) %> hidden-sm hidden-xs"><a href="<%= proyectos_de_innovacion_path %>">Contacto</a></li>
 
-    <div class="logo">
-        <%= link_to root_path do %> 
-        <%= image_tag src="logo.svg" %>
-        <% end %>
-    </div>
+            <li class="visible-sm visible-xs"><a href="<%= proyectos_de_innovacion_path %>">Proyectos</a></li>
+            <li class=" visible-sm visible-xs"><a href="<%= academy_path %>">Academy</a></li>
+            <li class=" visible-sm visible-xs"><a href="<%= nosotros_path %>">Idearia</a></li>
+            <li class="visible-sm visible-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
+            <li class=" visible-sm visible-xs"><a href="<%= proyectos_de_innovacion_path %>">Contacto</a></li>
+        </ul>
+    </nav> <!-- .cd-primary-nav -->
 
-    <!-- START Responsive Menu HTML -->
-    <div class="rm-container">
-        <a class="rm-toggle rm-button rm-nojs" href="#">Menu</a>
+<% if current_page?(proyectos_de_innovacion_path) or  current_page?(proyectos_de_innovacion_comerciales_path) or  current_page?(proyectos_de_innovacion_innovacion_path) or  current_page?(proyectos_de_innovacion_transformacion_digital_path) or  current_page?(proyectos_de_innovacion_gestion_del_talento_path)%>
+<nav class="cd-secondary-nav nuevo">
+        <ul>
+            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_comerciales_path) %> cool"><a href="<%=proyectos_de_innovacion_comerciales_path %>">Comercial</a></li>
+            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_innovacion_path) %> cool"><a href="<%=proyectos_de_innovacion_innovacion_path %>">Laboratorio Innovación</a></li>
+            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_transformacion_digital_path) %> cool"><a href="<%=proyectos_de_innovacion_transformacion_digital_path %>">Transformación Digital</a></li>
+            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_gestion_del_talento_path) %> cool"><a href="<%=proyectos_de_innovacion_gestion_del_talento_path %>">Gestión de Talento</a></li>
+        </ul>
+    </nav> <!-- .cd-secondary-nav-->
+<% end %>
 
-        <nav class="rm-nav rm-nojs rm-lighten">
-            <ul>
-                <li><a href="<%= proyectos_de_innovacion_path %>">Proyectos de Innovación <span class="fa fa-chevron-circle-down"></span></a>
-                    <ul>
-                        <li><a href="<%= proyectos_de_innovacion_comerciales_path %>">Comerciales  <span class="fa fa-chevron-circle-right two"></span></a>
-                            <ul>
-                                <li><a href="<%= proyectos_de_innovacion_comerciales_experiencia_del_cliente_path %>">Experiencia del Cliente</a></li>
-                                <li><a href="<%= proyectos_de_innovacion_comerciales_nuevos_clientes_path %>">Nuevos Clientes</a></li>
-                                <li><a href="<%= proyectos_de_innovacion_comerciales_nuevos_productos_o_servicios_path%>">Nuevos productos y servicios</a></li>
-                                <li><a href="<%= proyectos_de_innovacion_comerciales_nuevas_lineas_de_negocio_path %>">Nuevas líneas de negocio</a></li>
-                            </ul></li>
-                        <li><a href="<%= %>">Innovación  <span class="fa fa-chevron-circle-right two"></span></a>
-                            <ul>
-                                <li><a href="<%= proyectos_de_innovacion_innovacion_laboratorio_de_innovacion_path%>">Laboratorio de Innovación</a></li>
-                                <li><a href="<%= proyectos_de_innovacion_innovacion_cultura_de_la_innovacion_path %>">Cultura de Innovación</a></li>
-                            </ul></li>
+<% if current_page?(academy_path) %>
+<nav class="cd-secondary-nav nuevo">
+        <ul>
+            <li class="<%= 'active2' if current_page?(academy_path) %> cool"><a href="<%=academy_path %>">Talleres Inhouse</a></li>
+            <li class="<%= 'active2' if current_page?(academy_path) %> cool"><a href="<%=academy_path %>">Talleres Abiertos</a></li>
+        </ul>
+    </nav> <!-- .cd-secondary-nav-->
+<% end %>
 
-                        <li><a href="<%= proyectos_de_innovacion_transformacion_digital_path%>">Transformación Digital  <span class="fa fa-chevron-circle-right two"></span></a>
-                            <ul>
-                                <li><a href="<%=transformacion_digital_diseno_web_path %>">Diseño Web</a></li>
-                                <li><a href="<%=transformacion_digital_mobile_path %>">Mobile</a></li>
-                                <li><a href="<%=transformacion_digital_devops_path %>">DevOps</a></li>
-                            </ul></li>
+<% if current_page?(nosotros_path) or current_page?(nosotros_equipo_path) or current_page?(nosotros_casos_de_exito_path) or current_page?(nosotros_herramientas_path)%>
+<nav class="cd-secondary-nav nuevo">
+        <ul>
+            <li class="<%= 'active2' if current_page?(nosotros_equipo_path) %> cool"><a href="<%=nosotros_equipo_path %>">Equipo</a></li>
+            <li class="<%= 'active2' if current_page?(nosotros_casos_de_exito_path) %> cool"><a href="<%=nosotros_casos_de_exito_path %>">Casos de Éxito</a></li>
+            <li class="<%= 'active2' if current_page?(nosotros_herramientas_path) %> cool"><a href="<%=nosotros_herramientas_path %>">Herramientas</a></li>
+        </ul>
+    </nav> <!-- .cd-secondary-nav-->
+<% end %>
 
-                        <li><a href="<%= proyectos_de_innovacion_gestion_del_talento_path%>">Desarrollo de Talento  <span class="fa fa-chevron-circle-right two"></span></a>
-                            <ul>
-                                <li><a href="<%= gestion_del_talento_rediseno_de_area_path%>">Creación o rediseño de área</a></li>
-                                <li><a href="<%= gestion_del_talento_reclutamiento_y_seleccion_path%>">Reclutamiento y Selección</a></li>
-                            </ul></li>
-                        <li class="hidden"><a href="<%= %>"></a></li>
-                        <li class="hidden"><a href="<%= %>"></a></li>
-                    </ul></li>
-                <li><a href="<%= emprendedores_path %>">Emprendedores <span class="fa fa-chevron-circle-down"></span></a>
-                    <ul>
-                        <li><a href="<%= emprendedores_diseno_de_modelo_de_negocio_path%>">Diseño de modelo de negocio</a></li>
-                    </ul></li>
-                <li><a href="<%= academy_path %>">Academy</a></li>
-                <li><a href="<%= %>">Nosotros <span class="fa fa-chevron-circle-down"></span></a>
-                    <ul>
-                        <li><a href="<%= nosotros_equipo_path%>">Equipo</a></li>
-                        <li><a href="<%= nosotros_casos_de_exito_path%>">Casos de Éxito</a></li>
-                        <li><a href="<%= nosotros_herramientas_path%>">Herramientas</a></li>
-                    </ul></li>
-                <li class="o"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
-            </ul>
-        </nav>
-    </div><!-- .rm-container -->
-    <!-- End Responsive Menu HTML -->
-</header>
+</header> <!-- .cd-auto-hide-header -->
 </div>
 
-<div class="row">
-    <div class="col-lg-10 col-lg-offset-1">
-        <div id="magic">
+
+<br><br><br>
+<br>
+
+
 
 <%= yield %>
 
-		</div>
-	</div>
-</div>
-
 
 <script>
-        jQuery(function ($) {
-            var menu = $('.rm-nav').rMenu({
-                // Optional Settings
-                /**
-                 * Minimum width for expanded layout in pixels - String
-                 * The media query in css file should be changed to match this
-                 * Must be in pixels and include px units if not using Modernizr.
-                 * @default '769px'
-                 */
-                minWidth: '960px',
-                /**
-                 * The opening and closing speed of the menus in milliseconds
-                 * @default 400
-                 */
-                //transitionSpeed: 400,
-                /**
-                 * The jQuery easing function - used with jQuery transitions
-                 * @default 'swing'
-                 * @options 'swing', 'linear'
-                 */
-                //jqueryEasing: 'swing',
-                /**
-                 * The CSS3 transitions easing function - used with CSS3 transitions
-                 * @default 'ease'
-                 */
-                //css3Easing: 'ease',
-                /**
-                 * Use button as toggle link - instead of text
-                 * @default true
-                 */
-                //toggleBtnBool: true,
-                /**
-                 * The Toggle Link selector
-                 * @default '.rm-toggle'
-                 */
-                //toggleSel: '.rm-toggle',
-                /**
-                 * The menu/sub-menu selector
-                 * @default 'ul'
-                 */
-                //menuSel: 'ul',
-                /**
-                 * The menu items selector
-                 * @default 'li'
-                 */
-                //menuItemsSel: 'li',
-                /**
-                 * Use CSS3 animation/transitions Boolean
-                 * @default true
-                 * Do not use animation/transitions: false
-                 */
-                //animateBool: false,
-                /**
-                 * Force GPU Acceleration Boolean
-                 * @default false
-                 * Do not force: false
-                 */
-                //accelerateBool: true,
-                /**
-                 * the setup complete callback function
-                 * @default 'false'
-                 */
-                //setupCallback: false,
-                /**
-                 * the tabindex start value - integer
-                 * @default 1
-                 */
-                //tabindexStart: 5,
-                /**
-                 * Use development mode - outputs information to console
-                 * @default false
-                 */
-                //developmentMode: false
-            });
-        });
-    </script>
+    jQuery(document).ready(function($){
+    var mainHeader = $('.cd-auto-hide-header'),
+        secondaryNavigation = $('.cd-secondary-nav'),
+        //this applies only if secondary nav is below intro section
+        belowNavHeroContent = $('.sub-nav-hero'),
+        headerHeight = mainHeader.height();
+    
+    //set scrolling variables
+    var scrolling = false,
+        previousTop = 0,
+        currentTop = 0,
+        scrollDelta = 10,
+        scrollOffset = 150;
+
+    mainHeader.on('click', '.nav-trigger', function(event){
+        // open primary navigation on mobile
+        event.preventDefault();
+        mainHeader.toggleClass('nav-open');
+    });
+
+    $(window).on('scroll', function(){
+        if( !scrolling ) {
+            scrolling = true;
+            (!window.requestAnimationFrame)
+                ? setTimeout(autoHideHeader, 250)
+                : requestAnimationFrame(autoHideHeader);
+        }
+    });
+
+    $(window).on('resize', function(){
+        headerHeight = mainHeader.height();
+    });
+
+    function autoHideHeader() {
+        var currentTop = $(window).scrollTop();
+
+        ( belowNavHeroContent.length > 0 ) 
+            ? checkStickyNavigation(currentTop) // secondary navigation below intro
+            : checkSimpleNavigation(currentTop);
+
+        previousTop = currentTop;
+        scrolling = false;
+    }
+
+    function checkSimpleNavigation(currentTop) {
+        //there's no secondary nav or secondary nav is below primary nav
+        if (previousTop - currentTop > scrollDelta) {
+            //if scrolling up...
+            mainHeader.removeClass('is-hidden');
+        } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
+            //if scrolling down...
+            mainHeader.addClass('is-hidden');
+        }
+    }
+
+    function checkStickyNavigation(currentTop) {
+        //secondary nav below intro section - sticky secondary nav
+        var secondaryNavOffsetTop = belowNavHeroContent.offset().top - secondaryNavigation.height() - mainHeader.height();
+        
+        if (previousTop >= currentTop ) {
+            //if scrolling up... 
+            if( currentTop < secondaryNavOffsetTop ) {
+                //secondary nav is not fixed
+                mainHeader.removeClass('is-hidden');
+                secondaryNavigation.removeClass('fixed slide-up');
+                belowNavHeroContent.removeClass('secondary-nav-fixed');
+            } else if( previousTop - currentTop > scrollDelta ) {
+                //secondary nav is fixed
+                mainHeader.removeClass('is-hidden');
+                secondaryNavigation.removeClass('slide-up').addClass('fixed'); 
+                belowNavHeroContent.addClass('secondary-nav-fixed');
+            }
+            
+        } else {
+            //if scrolling down...  
+            if( currentTop > secondaryNavOffsetTop + scrollOffset ) {
+                //hide primary nav
+                mainHeader.addClass('is-hidden');
+                secondaryNavigation.addClass('fixed slide-up');
+                belowNavHeroContent.addClass('secondary-nav-fixed');
+            } else if( currentTop > secondaryNavOffsetTop ) {
+                //once the secondary nav is fixed, do not hide primary nav if you haven't scrolled more than scrollOffset 
+                mainHeader.removeClass('is-hidden');
+                secondaryNavigation.addClass('fixed').removeClass('slide-up');
+                belowNavHeroContent.addClass('secondary-nav-fixed');
+            }
+
+        }
+    }
+});
+</script>
 
 </body>
 </html>

@@ -16,19 +16,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Kalam');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
 
 @font-face{
-font-family:"Gibson";
-  src:asset-url("gibson-regular.ttf") format("typefont");
-font-family:"Gibson_thin";
-  src:asset-url("gibson-light.ttf") format("typefont");
-font-family:"Gibson_bold";
-  src:asset-url("gibson-semibold.ttf") format("typefont");
-}
-
-@font-face{
-	font-family:"Proxima_Nova";
-  src:asset-url("Proxima_Nova.ttf") format("typefont");
+font-family:"Sophia";
+  src:asset-url("Sofia-Pro-Regular.otf") format("opentype");
 }
 
 
@@ -40,11 +33,15 @@ $back: #f6f6f6;
 $blue: #0099ff;
 
 body {
-font-family: 'Gibson_thin', sans-serif;
+font-family: 'Merriweather', serif;
 -webkit-font-smoothing: antialiased;
 background-color: $back;
 color: $red;
 text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  font-family: "Sophia",serif !important;
 }
 
 .logo {
@@ -59,7 +56,7 @@ text-rendering: optimizeLegibility;
 	text-transform: uppercase !important;
 	text-align: center;
 	a {
-	font-family: 'Proxima_Nova', sans-serif;
+	font-family: 'Merriweather', serif;
 	font-size: 14px;
 	color: #555;
 	
@@ -84,6 +81,7 @@ text-rendering: optimizeLegibility;
 
 p, a {
 	color: #6A6C6C;
+  font-family: 'Merriweather', serif;
 }
 
 a {
@@ -255,7 +253,7 @@ input[type="url"],input[type="date"],input[type="name"], input[type="email"], in
 
 .typed2 {
   text-align: center;
-	text-transform: uppercase;
+	
 	font-size: 110px;
 	color: #222;
 	margin: 0px;
@@ -269,7 +267,7 @@ input[type="url"],input[type="date"],input[type="name"], input[type="email"], in
 
 .typed {
 	color: #555;
-	text-transform: uppercase;
+	
 	font-size: 3.2rem;
 	margin: 0px;
   font-weight: 300;
@@ -400,5 +398,38 @@ span {
   margin-right: 10px;
   font-size: 15px;
 }
+
+}
+
+#head {
+  z-index: 33;
+
+  a{
+  font-family: "Sophia",serif !important;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #727272;
+}
+li {
+  padding: 0px 6px;
+}
+.active {
+  border-bottom: solid 2px $red;
+  a{
+  color: black;
+}
+}
+
+.active2 {
+  a{
+  color: $blue;
+}
+}
+
+.nuevo {
+  border-top: solid 1px #f4f2f2;
+}
+
+
 
 }
