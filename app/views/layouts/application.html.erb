@@ -76,8 +76,71 @@
 <br>
 
 
-
+<div id="content">
 <%= yield %>
+</div>
+
+
+<div id="footer">
+    <div class="container">
+
+    <div class="col-md-3 col-sm-12">
+        <h5>México</h5>
+        <hr class="leve">
+        <p>Lago Zurich 219, Ampliación Granada</p>
+        <p>CDMX, México</p>
+        <a href="+51987847757">Teléfono: (+51) 987847757</a>
+        <br><br><br>
+        <h5>Perú</h5>
+        <hr class="leve">
+        <p>Av. La Encalada 1471, Santiago de Surco</p>
+        <p>Lima, Perú</p>
+        <a href="+51987847757">Teléfono: (+51) 987847757</a>
+    </div>
+
+    <br><br>
+
+    <div class="col-md-3 col-sm-6">
+        <h5>Recursos</h5>
+        <hr class="leve">
+        <ul>
+            <li>
+              <h6>Comercial</h6>
+              <h6>Laboratorio de Innovación</h6>
+              <h6>Transformación Digital</h6>
+              <h6>Gestión de Talento</h6>  
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <h5>Idearia</h5>
+        <hr class="leve">
+        <ul>
+            <li>
+              <h6>Nosotros</h6>
+              <h6>Equipo</h6>
+              <h6>Casos de Éxito</h6>
+              <h6>Herramientas</h6>  
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <h5>Síguenos</h5>
+        <div id="iconos">
+        <hr class="leve">
+        <%= link_to "https://twitter.com/idearialab" do %>
+        <span class="fa fa-twitter icon"></span>
+        <% end %>
+        <%= link_to "https://www.facebook.com/idearialab" do %>
+        <span class="fa fa-facebook icon"></span>
+        <% end %>
+        </div>
+        <br><br>
+        <h5>Newsletter</h5>
+        <hr class="leve">
+    </div>
+    </div>
+</div>
 
 
 <script>

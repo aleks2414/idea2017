@@ -269,7 +269,7 @@ input[type="url"],input[type="date"],input[type="name"], input[type="email"], in
 }
 
 .typed2 {
-  /*text-align: left;*/
+  text-align: left;
 	
 	font-size: 80px;
 	color: #222;
@@ -281,7 +281,7 @@ input[type="url"],input[type="date"],input[type="name"], input[type="email"], in
   /*transform: translate(-50%, -50%);*/
 
 strong {
-  font-family: 'Kalam', cursive;
+  color: $red;
 }
 }
 
@@ -293,7 +293,7 @@ strong {
   font-weight: 300;
   letter-spacing: 100;
   position: absolute;
-  /*text-align: left;*/
+  text-align: left;
   top: 52%;
   left: 40px;
   /*transform: translate(-50%, -50%);*/
@@ -321,7 +321,7 @@ background-attachment: unset;
 }
 
 .typed2 {
-	font-size: 80px;
+	font-size: 90px;
 }
 
 .typed {
@@ -400,6 +400,21 @@ hr.lefty {
   border-width: 1.5px;
   max-width: 100px;
   margin-left: .5rem;
+}
+
+hr.leve {
+  border-color: $grey;
+  border-width: .5px;
+  margin-top: 5px;
+  max-width: 50px;
+  margin-left: 0;
+}
+
+hr.righty {
+  border-color: $grey;
+  border-width: 1.5px;
+  max-width: 100px;
+  margin-right: .5rem;
 }
 
 #texto {
@@ -496,7 +511,7 @@ li {
   background-color: white;
   margin-top: -10rem;
   padding: 15px;
-  padding-bottom: 70px;
+  padding-bottom: 140px;
 -webkit-clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 h3 {
@@ -504,12 +519,14 @@ h3 {
   font-size: 2.5em;
   font-weight: 900;
   margin-top: 5px;
+  text-align: left;
 }
 
 h5 {
   margin-top: 10px;
   color: #adadad;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .fade2 {
@@ -539,8 +556,6 @@ img {
 }
 }
 
-#test {
-  text-align: center;
   h5 {
   margin-top: 10px;
   color: #adadad;
@@ -553,11 +568,15 @@ h3 {
   font-weight: 900;
   margin-top: 5px; 
 }
+
+#test {
+  padding: 20px;
+  text-align: center;
 }
 
 #new  {
   background-color: white;
-  padding: 30px;
+  padding: 70px 30px;
   -webkit-clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0% 100%);
 clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0% 100%);
 
@@ -579,4 +598,102 @@ p {
   font-size: .9em;
 }
 
+img {
+  margin-top: 30px;
+}
+
+}
+
+#footer {
+  background-color: $light_red;
+  padding: 30px 0;
+  h6 {
+    color: white;
+    font-size: 1em;
+  }
+  #iconos {
+      span {
+      margin-right: 10px;
+      color: $blue;
+      font-size: 20px;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  p, a {
+    color: white;
+    font-size: .9em;
+    font-family: "Sophia",serif !important;
+  }
+}
+
+#clientes {
+  text-align: center;
+  padding: 70px 30px;
+  img {
+    margin-top: 20px;
+    width: 110px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%); 
+  }
+  h3, h5, {
+    text-align: right;
+  }
+}
+
+#numeralia {
+  background-color: white;
+  -webkit-clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+  padding: 90px 30px 50px 30px;
+  text-align: center;
+  h4 {
+    color: black;
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .gris {
+    border-left: solid 2px black;
+    margin-top: 30px;
+  }
+  .gris2 {
+    margin-top: 30px;
+
+  }
+}
+
+#contact {
+  background-image: image-url("innova_cover.jpg");
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /*margin-bottom: 1rem;*/
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  margin: 0;
+  background-color: #989898;
+
+   
+}
+
+
+#content {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 800px)
+{
+
+#content {
+background-attachment: unset;
+}
 }
