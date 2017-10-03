@@ -310,10 +310,11 @@ hr.leve {
 }
 
 hr.righty {
-  border-color: $grey;
+  border-color: $blue;
   border-width: 1.5px;
-  max-width: 100px;
-  margin-right: .5rem;
+  max-width: 20px;
+  margin-right: 0;
+  margin-top: 0;
 }
 
 
@@ -573,3 +574,41 @@ clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
   }
 }
 
+#clientes {
+  padding: 50px 30px;
+    img {
+    width: 75%;
+        -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+  }
+}
+
+
+#numeros {
+  padding: 50px 30px;
+  background-color: white;
+-webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+  h5 {
+    text-align: right;
+  }
+  h3 {
+    text-align: right;
+  }
+
+  h1 {
+    font-size: 35px;
+    color: #c9c9c9;
+  }
+  h2 {
+    font-size: 45px;
+    color: #555;
+  }
+  h4 {
+    font-size: 15px;
+    color: #848383;
+  }
+}
