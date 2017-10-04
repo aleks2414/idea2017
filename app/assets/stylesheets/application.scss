@@ -612,3 +612,20 @@ clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
     color: #848383;
   }
 }
+
+#contacto {
+  padding: 70px 30px 70px 30px;
+  h3 {
+    text-align: left;
+  }
+  p {
+    text-align: left;
+  }
+  button {
+    position: absolute;
+    left: 0;
+  }
+  img  {
+    width: 100%;
+  }
+}
