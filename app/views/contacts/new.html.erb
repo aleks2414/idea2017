@@ -1,0 +1,41 @@
+<div id="forma">
+	<div class="container">
+		<h3><strong>Vamos a conocernos mejor</strong></h3>
+		<h5>Encontremos algo de qué platicar</h5>
+		
+		<%= form_for @contact do |f| %>
+		<p>
+			Hola, mi nombre es
+			<%= f.text_field :name, required: true, placeholder: "Escribe tu nombre completo" %>, soy
+
+			<%= f.select :profile, ['una organización', 'un emprendedor', 'una universidad']%>
+
+			vivo en la ciudad de
+			<%= f.text_field :city, placeholder: "Ej. CDMX, Lima, Monterrey" %>
+
+			, y estoy muy interesado en
+			<%= f.select :service, ['una consultoria', 'un curso', 'un taller', 'una conferencia']%>
+
+			<br> <br>Pueden contactarme al teléfono:
+			<%= f.number_field :phone, placeholder: "Ej. +1 (55) 1234 3465" %> o al correo:
+
+			<%= f.email_field :email, required: true, placeholder: "Ej. nuevo@mimail.com" %>
+
+			<br>
+			<br>
+			Mensaje adicional: 
+			<br>
+			<%= f.text_area :comments, placeholder: "Déjanos tus comentarios" %>
+
+		<div class="hidden">
+			<%= f.label :nickname %><br>
+			<%= f.text_field :nickname, hint: 'Esto se queda en blanco' %>
+		</div>
+	
+		<br>
+		<%= f.submit "Enviar", class:"button button_red"%>
+		<br>
+</p>
+		<% end %>
+	</div>
+</div>
