@@ -628,3 +628,58 @@ clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
     width: 80%;
   }
 }
+
+#forma {
+  margin: 40px 0;
+  #formario {
+    background-color: white;
+    padding: 30px;
+    p {
+      text-align: left;
+      font-family: "Sophia",serif !important;
+      font-size: 19px;
+      color: #1e1e1e;
+    
+    input, select {
+      background: #f9fdff !important;
+      padding-left: 10px;
+      max-width: 250px;
+        color: #949494;
+        border: none;
+        font-size: 17px;
+    }
+    input::placeholder {
+  color: #949494;
+}
+
+    textarea {
+      background: #f9fdff !important;
+      padding-left: 10px;
+        color: #949494;
+        border: none;
+    }
+    textarea::placeholder {
+  color: #949494;
+}
+  }
+  }
+}
+
+
+#mapas {
+  padding: 100px 30px;
+  background-color: white;
+  -webkit-clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+  img {
+    margin-bottom: 20px;
+  }
+  h4 {
+    color: black;
+    font-size: 19px;
+  }
+  p {
+    margin: 0;
+    font-size: 13px;
+  }
+}

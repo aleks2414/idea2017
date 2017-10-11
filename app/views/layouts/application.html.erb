@@ -28,13 +28,13 @@
             <li class="<%= 'active' if current_page?(academy_path) %> hidden-sm hidden-xs"><a href="<%= academy_path %>">Academy</a></li>
             <li class="<%= 'active' if current_page?(nosotros_path) or current_page?(nosotros_equipo_path) or current_page?(nosotros_casos_de_exito_path) or current_page?(nosotros_herramientas_path) %> hidden-sm hidden-xs"><a href="<%= nosotros_path %>">Idearia</a></li>
             <li class="hidden-sm hidden-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
-            <li class="<%= 'active' if current_page?(proyectos_de_innovacion_path) %> hidden-sm hidden-xs"><a href="<%= proyectos_de_innovacion_path %>">Contacto</a></li>
+            <li class="<%= 'active' if current_page?(proyectos_de_innovacion_path) %> hidden-sm hidden-xs"><a href="<%= new_contact_path %>">Contacto</a></li>
 
             <li class="visible-sm visible-xs"><a href="<%= proyectos_de_innovacion_path %>">Proyectos</a></li>
             <li class=" visible-sm visible-xs"><a href="<%= academy_path %>">Academy</a></li>
             <li class=" visible-sm visible-xs"><a href="<%= nosotros_path %>">Idearia</a></li>
             <li class="visible-sm visible-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
-            <li class=" visible-sm visible-xs"><a href="<%= proyectos_de_innovacion_path %>">Contacto</a></li>
+            <li class=" visible-sm visible-xs"><a href="<%= new_contact_path %>">Contacto</a></li>
         </ul>
     </nav> <!-- .cd-primary-nav -->
 
