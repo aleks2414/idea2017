@@ -24,6 +24,9 @@ end
 
 def academy
 	@contact = Contact.new
-  
+end
+
+def idearia_lab
+  @contact = Contact.new
 end
 end

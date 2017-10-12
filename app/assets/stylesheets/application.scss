@@ -385,13 +385,16 @@ h3 {
     color: white;
     font-size: 1em;
   }
+  h5 {
+    color: $blue;
+  }
   #iconos {
       span {
       margin-right: 10px;
-      color: $blue;
+      color: white;
       font-size: 20px;
       &:hover {
-        color: white;
+        color: $blue;
       }
     }
   }
@@ -400,6 +403,10 @@ h3 {
     font-size: .9em;
     font-family: "Sophia",serif !important;
   }
+}
+
+.down {
+  margin-bottom: 50px;
 }
 
 #content {
@@ -452,7 +459,7 @@ p {
     right: -10px;
     height: 13px;
     width: 100%;
-    background: #25c6fe;
+    background: #97e2fc;
     z-index: -1;
 }
 
@@ -471,7 +478,7 @@ p {
     right: -10px;
     height: 13px;
     width: 100%;
-    background: #feffaf;
+    background: #ffc5e2;
     z-index: -1;
 }
 
@@ -733,6 +740,15 @@ h4 {
     }
   }
 
+  #cuadrito2 {
+    background-color: $red;
+    /*border: solid 5px $blue;*/
+    padding: 30px;
+    p,h2 {
+      color: white;
+    }
+  }
+
 #impacto {
   padding: 90px 30px;
   margin-top: 30px;
@@ -750,11 +766,8 @@ p.negro {
 }
 }
 
-body .modal-admin {
-    //new custom width
-    width: 750px;
-    //must be half of the width, minus scrollbar on the left (30px)
-    margin: -345px 0 0 -375px;
+.modal-body {
+  padding: 20px;
 }
 
 
@@ -768,4 +781,12 @@ body .modal-admin {
   background-color: #fafafa !important;
   padding-left: 5px;
   }
+}
+
+.float_right {
+  float: right;
+    margin-top: -50px;
+    margin-right: -40px;
+    height: 36px;
+    width: 36px;
 }

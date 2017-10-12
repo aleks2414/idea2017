@@ -139,50 +139,44 @@
 <div id="footer">
     <div class="container">
 
-    <div class="col-md-2 col-sm-4 col-xs-6">
+    <div class="col-md-2 col-sm-4 col-xs-6 down">
         <h5>México</h5>
-        <hr class="leve">
         <p>Lago Zurich 219, Ampliación Granada</p>
         <p>CDMX, México</p>
         <a href="+51987847757">Teléfono: (+51) 987847757</a>
     </div>
 
-    <div class="col-md-2 col-sm-4 col-xs-6">
+    <div class="col-md-2 col-sm-4 col-xs-6 down">
         <h5>Perú</h5>
-        <hr class="leve">
         <p>Av. La Encalada 1471, Santiago de Surco</p>
         <p>Lima, Perú</p>
         <a href="+51987847757">Teléfono: (+51) 987847757</a>
     </div>
 
-    <div class="col-md-2 col-sm-4 col-xs-6">
+    <div class="col-md-2 col-sm-4 col-xs-6 down">
         <h5>Guatemala</h5>
-        <hr class="leve">
-        <p>Av. La Encalada 1471, Santiago de Surco</p>
-        <p>Lima, Perú</p>
+        <p>4A Avenida, Zona 10, Ciudad Guatemala</p>
+        <p>Guatemala</p>
         <a href="+51987847757">Teléfono: (+51) 987847757</a>
     </div>
 
 
-    <div class="col-md-4 col-sm-6">
+    <div class="col-md-4 col-sm-6 down">
         <h5>Recursos</h5>
-        <hr class="leve">
         <ul>
             <li>
-              <h6>Modelo de Innovación</h6>
-              <h6>Academy</h6>
-              <h6>Nosotros</h6>
-              <h6>Equipo</h6>
-              <h6>Casos de Éxito</h6>
-              <h6>Herramientas</h6>  
+              <h6><%= link_to "Modelo de Innovación", modelo_de_innovacion_hacemos_path  %></h6>
+              <h6><%= link_to "Academy", academy_path %></h6>
+              <h6><%= link_to "Nosotros", nosotros_path  %></h6>
+              <h6><%= link_to "Equipo",  nosotros_path%></h6>
+              <h6><%= link_to "Casos de Éxito",  nosotros_path%></h6>
+              <h6><%= link_to "Herramientas",  nosotros_path%></h6>  
             </li>
         </ul>
     </div>
-    <div class="col-md-2 col-sm-6">
+    <div class="col-md-2 col-sm-6 col-xs-6 down">
         <h5>Síguenos</h5>
-        <hr class="leve">
         <div id="iconos">
-        <hr class="leve">
         <%= link_to "https://twitter.com/idearialab" do %>
         <span class="fa fa-twitter icon"></span>
         <% end %>
@@ -192,7 +186,12 @@
         </div>
         <br><br>
         <h5>Newsletter</h5>
-        <hr class="leve">
+        <div id="contactito">
+        <%= form_for @contact do |f| %>
+            <%= f.email_field :email, required: true, placeholder: "a@a.com" %>
+            <button type="submit" name="commit" class="button_blue float_right"><span class="fa fa-paper-plane"></span></button>
+        <% end %>
+        </div>
     </div>
     </div>
 </div>
