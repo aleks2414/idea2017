@@ -1,28 +1,12 @@
 Rails.application.routes.draw do
 
-get '/proyectos_de_innovacion' => 'pages#proyectos'
-get '/emprendedores' => 'pages#emprendedores'
 get '/academy' => 'pages#academy'
 get '/nosotros' => 'pages#idearia_lab'
-get '/proyectos_de_innovacion/comerciales' => 'pages#comerciales'
-get '/proyectos_de_innovacion/comerciales/experiencia_del_cliente' => 'pages#experiencia_cliente'
-get '/proyectos_de_innovacion/comerciales/nuevos_clientes' => 'pages#nuevos_clientes'
-get '/proyectos_de_innovacion/comerciales/nuevos_productos_o_servicios' => 'pages#nuevos_productos'
-get '/proyectos_de_innovacion/comerciales/nuevas_lineas_de_negocio' => 'pages#nuevas_lineas'
-get '/proyectos_de_innovacion/innovacion/laboratorio_de_innovacion' => 'pages#lab_innovacion'
-get '/proyectos_de_innovacion/innovacion/cultura_de_la_innovacion' => 'pages#cultura_innovacion'
-get '/transformacion_digital/diseno_web' => 'pages#diseño_web'
-get '/transformacion_digital/mobile' => 'pages#mobile'
-get '/transformacion_digital/devops' => 'pages#devops'
-get '/gestion_del_talento/rediseno_de_area' => 'pages#rediseño_area'
-get '/gestion_del_talento/reclutamiento_y_seleccion' => 'pages#reclutamiento_selección'
-get '/emprendedores/diseno_de_modelo_de_negocio' => 'pages#modelo_de_negocios'
+get '/modelo_de_innovacion/hacemos' => 'pages#hacemos'
+get '/modelo_de_innovacion/entrenamiento' => 'pages#entrenamiento'
 get '/nosotros/equipo' => 'pages#equipo'
 get '/nosotros/casos_de_exito' => 'pages#casos_exito'
 get '/nosotros/herramientas' => 'pages#herramientas'
-get '/proyectos_de_innovacion/innovacion' => 'pages#innovacion'
-get '/proyectos_de_innovacion/transformacion_digital' => 'pages#transformacion_digital'
-get '/proyectos_de_innovacion/gestion_del_talento' => 'pages#rrhh'
 
 resources :contacts, only: [:new, :create]
 

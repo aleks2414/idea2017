@@ -24,13 +24,13 @@
         </a> <!-- .nav-trigger -->
 
         <ul id="cd-navigation">
-            <li class="<%= 'active' if current_page?(proyectos_de_innovacion_path) or  current_page?(proyectos_de_innovacion_comerciales_path) or  current_page?(proyectos_de_innovacion_innovacion_path) or  current_page?(proyectos_de_innovacion_transformacion_digital_path) or  current_page?(proyectos_de_innovacion_gestion_del_talento_path) %> hidden-sm hidden-xs"><a href="<%= proyectos_de_innovacion_path %>">Proyectos</a></li>
+            <li class="<%= 'active' if current_page?(modelo_de_innovacion_hacemos_path) or  current_page?(modelo_de_innovacion_entrenamiento_path) %> hidden-sm hidden-xs"><a href="<%= modelo_de_innovacion_hacemos_path %>">Modelo de innovación</a></li>
             <li class="<%= 'active' if current_page?(academy_path) %> hidden-sm hidden-xs"><a href="<%= academy_path %>">Academy</a></li>
             <li class="<%= 'active' if current_page?(nosotros_path) or current_page?(nosotros_equipo_path) or current_page?(nosotros_casos_de_exito_path) or current_page?(nosotros_herramientas_path) %> hidden-sm hidden-xs"><a href="<%= nosotros_path %>">Idearia</a></li>
             <li class="hidden-sm hidden-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
-            <li class="<%= 'active' if current_page?(proyectos_de_innovacion_path) %> hidden-sm hidden-xs"><a href="<%= new_contact_path %>">Contacto</a></li>
+            <li class="<%= 'active' if current_page?(new_contact_path) %> hidden-sm hidden-xs"><a href="<%= new_contact_path %>">Contacto</a></li>
 
-            <li class="visible-sm visible-xs"><a href="<%= proyectos_de_innovacion_path %>">Proyectos</a></li>
+            <li class="visible-sm visible-xs"><a href="<%= modelo_de_innovacion_hacemos_path %>">Modelo de innovación</a></li>
             <li class=" visible-sm visible-xs"><a href="<%= academy_path %>">Academy</a></li>
             <li class=" visible-sm visible-xs"><a href="<%= nosotros_path %>">Idearia</a></li>
             <li class="visible-sm visible-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
@@ -38,13 +38,11 @@
         </ul>
     </nav> <!-- .cd-primary-nav -->
 
-<% if current_page?(proyectos_de_innovacion_path) or  current_page?(proyectos_de_innovacion_comerciales_path) or  current_page?(proyectos_de_innovacion_innovacion_path) or  current_page?(proyectos_de_innovacion_transformacion_digital_path) or  current_page?(proyectos_de_innovacion_gestion_del_talento_path)%>
+<% if current_page?(modelo_de_innovacion_hacemos_path) or  current_page?(modelo_de_innovacion_entrenamiento_path)%>
 <nav class="cd-secondary-nav nuevo">
         <ul>
-            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_comerciales_path) %> cool"><a href="<%=proyectos_de_innovacion_comerciales_path %>">Comercial</a></li>
-            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_innovacion_path) %> cool"><a href="<%=proyectos_de_innovacion_innovacion_path %>">Laboratorio Innovación</a></li>
-            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_transformacion_digital_path) %> cool"><a href="<%=proyectos_de_innovacion_transformacion_digital_path %>">Transformación Digital</a></li>
-            <li class="<%= 'active2' if current_page?(proyectos_de_innovacion_gestion_del_talento_path) %> cool"><a href="<%=proyectos_de_innovacion_gestion_del_talento_path %>">Gestión de Talento</a></li>
+            <li class="<%= 'active2' if current_page?(modelo_de_innovacion_hacemos_path) %> cool"><a href="<%=modelo_de_innovacion_hacemos_path %>">Hacemos</a></li>
+            <li class="<%= 'active2' if current_page?(modelo_de_innovacion_entrenamiento_path) %> cool"><a href="<%=modelo_de_innovacion_entrenamiento_path %>">Entrenamiento</a></li>
         </ul>
     </nav> <!-- .cd-secondary-nav-->
 <% end %>
@@ -78,6 +76,63 @@
 
 <div id="content">
 <%= yield %>
+
+
+<!-- Modal -->
+<div class="modal fade" id="PhotoModal" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h5>No esperes más</h5>
+                <hr class="lefty">
+                <h3 class="izquierdo">Contáctanos</h3>
+                <br>
+                <div id="contactito">
+                    <%= form_for @contact do |f| %>
+                    <h5><strong>Nombre:</strong></h5>
+                    <%= f.text_field :name, required: true, placeholder: "Escribe tu nombre completo" %>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5><strong>Empresa:</strong></h5>
+                            <%= f.text_field :profile, required: true, placeholder: "Nombre de tu empresa" %>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5><strong>Rol:</strong></h5>
+                            <%= f.text_field :city, required: true, placeholder: "Escribe el rol que tienes" %>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h5><strong>Email:</strong></h5>
+                                <%= f.email_field :email, required: true, placeholder: "Ej. nuevo@mimail.com" %>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <h5><strong>Teléfono:</strong></h5>
+                                <%= f.number_field :phone, placeholder: "Ej. +1 (55) 1234 3465" %>
+                            </div>
+                        </div>
+
+
+                    <h5><strong>Mensaje:</strong></h5>
+                    <%= f.text_area :comments, placeholder: "Déjanos tus comentarios" %>
+                </div>
+                <br>
+                <button type="button" class="button button_blue2" data-dismiss="modal">Cerrar</button>
+                <%= f.submit "Enviar", class:"button button_blue"%>
+                <br>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  -->
+
+
 </div>
 
 
@@ -141,6 +196,9 @@
     </div>
     </div>
 </div>
+
+
+
 
 
 <script>
