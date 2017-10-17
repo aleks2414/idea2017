@@ -785,8 +785,65 @@ p.negro {
 
 .float_right {
   float: right;
-    margin-top: -50px;
+    margin-top: -51px;
     margin-right: -40px;
-    height: 36px;
-    width: 36px;
+    height: 37px;
+    width: 37px;
+    /*border: none;*/
+    boder: solid 1px;
 }
+
+
+#imbi {
+  margin: 70px 0;
+  img {
+    width: 65%;
+  }
+  .imagen {
+    margin-top: 40px;
+  }
+}
+
+#equipo {
+  margin: 50px 0;
+
+  h5, h3 {
+    text-align: right;
+  }
+}
+
+#fotos {
+  img {
+    width: 100%;
+    -webkit-clip-path: polygon(14% 0, 100% 0%, 86% 100%, 0% 100%);
+    clip-path: polygon(14% 0, 100% 0%, 86% 100%, 0% 100%);
+  }
+  .imagina {
+    padding: 20px;
+    h2 {
+      text-align: left;
+      color: #555;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+    p {
+      text-align: left;
+    }
+   .iconitos {
+    text-align: left;
+    span {
+      color: $blue;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+   } 
+  }
+}
+
+hr.grenne {
+  border-color: #e3e3e3;
+  border-width: 1.5px;
+  max-width: 300px;
+  margin-left: 0;
+  margin: 15px 0;
+  }
