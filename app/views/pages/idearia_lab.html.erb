@@ -3,8 +3,6 @@
 				<h5>Idearia Lab</h5>
 				<hr class="lefty">
 				<h3 class="izquierdo">Nosotros</h3>
-				<p>La innovación depende de las personas.. Curiosas. Agentes de cambio y Capaces
-</p>
 
 <div class="imagen">
 	<%= image_tag "aniversario.png"%>
@@ -12,7 +10,7 @@
 	</div>
 </div>
 
-<div id="cuadrito">
+<!-- <div id="cuadrito">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<h2>¿Cómo logra Idearia Lab la innovación?</h2>
@@ -20,31 +18,44 @@
 			</p>
 		</div>
 	</div>
-</div>
+</div> -->
 
 
 <div id="equipo">
 	<div class="container">
-	<h5>Equipo</h5>
+	<h5>Creativos</h5>
 		<hr class="righty">
-		<h3>Nuestra gente creativa</h3>
+		<h3>La innovación depende de las personas
+<br>Curiosas. Capaces. Agentes de cambio
+</h3>
 </div>
 </div>
 
+
+  <div class="w3-bar w3-black">
+    <button class="button button_back tablink active2" onclick="openCity(event,'London')">México</button>
+    <button class="button button_back tablink" onclick="openCity(event,'Paris')">Guatemala</button>
+    <button class="button button_back tablink" onclick="openCity(event,'Tokyo')">Perú</button>
+   	<button class="button button_back tablink" onclick="openCity(event,'Madrid')">Colombia</button>
+  </div>
+
+
 <div id="fotos">
+	<div id="London" class="w3-container w3-border city">
 	<div class="container">
-		<h5>México</h5>
-		<hr class="lefty">
 		<div class="row">
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Jorge Peralta</h2>
 					<p>Director General</p>
 
 					<div class="iconitos">
+						<%= link_to "mailto:jorge@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<% end %>
 						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
 						<span class="fa fa-facebook" aria-hidden="true"></span>
 						<% end %>
@@ -60,20 +71,20 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Guillermo Muñoz</h2>
 					<p>Director</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:memo@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
+						<%= link_to "https://www.linkedin.com/in/memo-muñoz/", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://twitter.com/memomu8", :target => "_blank" do %>
 						<span class="fa fa-twitter" aria-hidden="true"></span>
-						<% end %>
-						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
-						<span class="fa fa-bolt" aria-hidden="true"></span>
 						<% end %>
 					</div>
 				</div>
@@ -81,19 +92,22 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Alex Romo</h2>
 					<p>Director de Tecnólogía</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
+						<%= link_to "mailto:alex@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://www.facebook.com/arturoalex.romo", :target => "_blank" do %>
 						<span class="fa fa-facebook" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
+						<%= link_to "https://twitter.com/aleks_romo", :target => "_blank" do %>
 						<span class="fa fa-twitter" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
+						<%= link_to "https://medium.com/@arturito.io", :target => "_blank" do %>
 						<span class="fa fa-bolt" aria-hidden="true"></span>
 						<% end %>
 					</div>
@@ -102,20 +116,17 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Nemesio Arriola</h2>
 					<p>Director Gestión de Talento</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:nemesio@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
-						<span class="fa fa-twitter" aria-hidden="true"></span>
-						<% end %>
-						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
-						<span class="fa fa-bolt" aria-hidden="true"></span>
+						<%= link_to "https://www.linkedin.com/in/nemesio-arriola-a6840426", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
 						<% end %>
 					</div>
 				</div>
@@ -123,20 +134,23 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Alberto Vazquez</h2>
 					<p>Director de Academy</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
+						<%= link_to "mailto:alberto@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://www.facebook.com/crea111", :target => "_blank" do %>
 						<span class="fa fa-facebook" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
+						<%= link_to "https://twitter.com/yosoyestadocero", :target => "_blank" do %>
 						<span class="fa fa-twitter" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
-						<span class="fa fa-bolt" aria-hidden="true"></span>
+						<%= link_to "https://www.linkedin.com/in/albertovazquez", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
 						<% end %>
 					</div>
 				</div>
@@ -144,12 +158,15 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Marcela Arriola</h2>
 					<p>Directora Administrativa</p>
 
 					<div class="iconitos">
+						<%= link_to "mailto:marcela@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<% end %>
 						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
 						<span class="fa fa-facebook" aria-hidden="true"></span>
 						<% end %>
@@ -165,20 +182,20 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Marizu Musi</h2>
 					<p>Directora Comercial</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:marizu@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
+						<%= link_to "https://www.linkedin.com/in/marizu-musi-3aa27531/", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://twitter.com/search?q=zumusi&src=typd", :target => "_blank" do %>
 						<span class="fa fa-twitter" aria-hidden="true"></span>
-						<% end %>
-						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
-						<span class="fa fa-bolt" aria-hidden="true"></span>
 						<% end %>
 					</div>
 				</div>
@@ -186,20 +203,17 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Juan Carlos Laguardia</h2>
-					<p>Director de Brand</p>
+					<p>Desarrollo de Marca</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:juancarlos@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
-						<span class="fa fa-twitter" aria-hidden="true"></span>
-						<% end %>
-						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
-						<span class="fa fa-bolt" aria-hidden="true"></span>
+						<%= link_to "https://www.linkedin.com/in/juan-carlos-laguardia-aguirre-9737a7114/", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
 						<% end %>
 					</div>
 				</div>
@@ -207,17 +221,17 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Christian Bautista</h2>
-					<p>Director General</p>
+					<p>Líder de proyectos</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:christian@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
-						<span class="fa fa-twitter" aria-hidden="true"></span>
+						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
 						<% end %>
 						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
 						<span class="fa fa-bolt" aria-hidden="true"></span>
@@ -229,28 +243,27 @@
 		</div>
 	</div>
 </div>
+</div>
 
 
-<br><br>
 <div id="fotos">
+	<div id="Paris" class="w3-container w3-border city" style="display:none">
 	<div class="container">
-		<h5>Guatemala</h5>
-		<hr class="lefty">
 		<div class="row">
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Miguel Oquendo</h2>
-					<p>Director General</p>
+					<p>Director de Guatemala</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:miguel@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
-						<span class="fa fa-twitter" aria-hidden="true"></span>
+						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
 						<% end %>
 						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
 						<span class="fa fa-bolt" aria-hidden="true"></span>
@@ -261,17 +274,17 @@
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Alfredo Godoy</h2>
-					<p>Director General</p>
+					<p>Director comercial Guatemala</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:agodoy@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
-						<span class="fa fa-twitter" aria-hidden="true"></span>
+						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
 						<% end %>
 						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
 						<span class="fa fa-bolt" aria-hidden="true"></span>
@@ -284,27 +297,26 @@
 		</div>
 	</div>
 </div>
+</div>
 
-<br><br>
 <div id="fotos">
+	<div id="Tokyo" class="w3-container w3-border city" style="display:none">
 	<div class="container">
-		<h5>Perú</h5>
-		<hr class="lefty">
 		<div class="row">
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Alfredo Fuentes</h2>
-					<p>Director General</p>
+					<p>Director de Perú</p>
 
 					<div class="iconitos">
-						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
-						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<%= link_to "mailto:alfredo@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
 						<% end %>
-						<%= link_to "https://twitter.com/japeraltag", :target => "_blank" do %>
-						<span class="fa fa-twitter" aria-hidden="true"></span>
+						<%= link_to "https://www.linkedin.com/in/alfredofuentes", :target => "_blank" do %>
+						<span class="fa fa-linkedin" aria-hidden="true"></span>
 						<% end %>
 						<%= link_to "http://innovaciondisruptiva.blogspot.mx/", :target => "_blank" do %>
 						<span class="fa fa-bolt" aria-hidden="true"></span>
@@ -316,22 +328,24 @@
 		</div>
 	</div>
 </div>
+</div>
 
-<br><br>
 <div id="fotos">
+	<div id="Madrid" class="w3-container w3-border city" style="display:none">
 	<div class="container">
-		<h5>Colombia</h5>
-		<hr class="lefty">
 		<div class="row">
 
 			<div class="col-sm-4 col-xs-6">
 				<div class="imagina">
-					<%=image_tag "Jorge.png" %>
+					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
 					<h2>Jose H. Berrio</h2>
 					<p>Director General</p>
 
 					<div class="iconitos">
+						<%= link_to "mailto:contacto@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<% end %>
 						<%= link_to "https://www.facebook.com/jorge.peralta.718", :target => "_blank" do %>
 						<span class="fa fa-facebook" aria-hidden="true"></span>
 						<% end %>
@@ -348,3 +362,106 @@
 		</div>
 	</div>
 </div>
+</div>
+
+
+
+<div id="casos">
+	<div class="container">
+		<h5>Casos de éxito</h5>
+		<hr class="lefty">
+		<h3>Empresas que se atrevieron</h3>
+
+<div class="row">
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConvaModal2">Aprende más!</button>
+		</div>
+	</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#CruzModal">Aprende más!</button>
+		</div>
+	</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ThelsaModal">Aprende más!</button>
+		</div>
+	</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#TractorModal">Aprende más!</button>
+		</div>
+	</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#MasterModal">Aprende más!</button>
+		</div>
+	</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#BroseModal">Aprende más!</button>
+		</div>
+	</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#PraxairModal">Aprende más!</button>
+		</div>
+	</div>
+
+		<div class="col-md-3 col-sm-6">
+			<div id="casito">
+			<%= image_tag "cliente01.png" %>
+			<p>Julio 2017</p>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConagraModal">Aprende más!</button>
+		</div>
+	</div>
+
+</div>
+	</div>
+</div>
+
+<%= render 'gandhi' %>
+<%= render 'azul' %>
+<%= render 'brose2' %>
+<%= render 'master2' %>
+<%= render 'praxair' %>
+<%= render 'thelsa2' %>
+<%= render 'tractores2'%>
+<%= render 'conagra'%>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active2", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active2";
+}
+</script>

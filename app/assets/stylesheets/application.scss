@@ -188,6 +188,13 @@ a {
   }
 }
 
+.button_back {
+  color: $blue;
+  background-color: transparent;
+  border: none;
+  /*border-bottom: solid 2px $blue;*/
+}
+
 .button_block {
   display: block;
   margin: 0 auto;
@@ -692,6 +699,10 @@ clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
 
 
 #mapas {
+
+h3, h5 {
+  text-align: right;
+}
   padding: 100px 30px;
   background-color: white;
   -webkit-clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
@@ -847,3 +858,31 @@ hr.grenne {
   margin-left: 0;
   margin: 15px 0;
   }
+
+.active2 {
+  border-bottom: solid 3px $red;
+  color: $red;
+}
+
+
+#casos{
+  padding: 100px 30px;
+  h3 {
+    text-align: left;
+  }
+  #casito {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#modli {
+  text-align: left;
+  h5 {
+    margin-top: 20px;
+  }
+}
