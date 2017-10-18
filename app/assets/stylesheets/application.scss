@@ -859,7 +859,7 @@ hr.grenne {
   margin: 15px 0;
   }
 
-.active2 {
+.active3 {
   border-bottom: solid 3px $red;
   color: $red;
 }
@@ -884,5 +884,81 @@ hr.grenne {
   text-align: left;
   h5 {
     margin-top: 20px;
+  }
+}
+
+#academy {
+  margin-top: 50px;
+}
+
+#minimi {
+  padding: 50px;
+  #mini {
+    margin-bottom: 20px;
+    /*background-color: green;*/
+    height: 250px;
+    padding: 20px;
+    h4 {
+      color: white;
+      font-size: 1.5em;
+      text-align: left;
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+  .n1 {
+    background-image: image-url("iconins-01.png");
+  }
+
+  .n2 {
+    background-image: image-url("iconins-02.png");
+  }
+
+  .n3 {
+    background-image: image-url("iconins-03.png");
+  }
+
+  .n4 {
+    background-image: image-url("iconins-04.png");
+  }
+
+  .n5 {
+    background-image: image-url("iconins-05.png");
+  }
+
+  .n6 {
+    background-image: image-url("iconins-06.png");
+  }
+
+  .n7 {
+    background-image: image-url("iconins-07.png");
+  }
+
+  .n8 {
+    background-image: image-url("iconins-08.png");
+  }
+
+  .n9 {
+    background-image: image-url("iconins-09.png");
+  }
+
+  .n10 {
+    background-image: image-url("iconins-10.png");
+  }
+
+  .n11 {
+    background-image: image-url("iconins-11.png");
+  }
+
+  .n12 {
+    background-image: image-url("iconins-12.png");
+  }
+
+  .n13 {
+    background-image: image-url("iconins-13.png");
+  }
+
+  .n14 {
+    background-image: image-url("iconins-14.png");
   }
 }

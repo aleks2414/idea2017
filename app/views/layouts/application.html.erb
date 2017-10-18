@@ -47,21 +47,21 @@
     </nav> <!-- .cd-secondary-nav-->
 <% end %>
 
-<% if current_page?(academy_path) %>
-<nav class="cd-secondary-nav nuevo">
+<%# if current_page?(academy_path) %>
+<!-- <nav class="cd-secondary-nav nuevo">
         <ul>
-            <li class="<%= 'active2' if current_page?(academy_path) %> cool"><a href="<%=academy_path %>">Talleres Inhouse</a></li>
-            <li class="<%= 'active2' if current_page?(academy_path) %> cool"><a href="<%=academy_path %>">Talleres Abiertos</a></li>
+            <li class="<%#= 'active2' if current_page?(academy_path) %> cool"><a href="<%#=academy_path %>">Talleres Inhouse</a></li>
+            <li class="<%#= 'active2' if current_page?(academy_path) %> cool"><a href="<%#=academy_path %>">Talleres Abiertos</a></li>
         </ul>
     </nav> <!-- .cd-secondary-nav-->
-<% end %>
+ <%# end %>
 
 <% if current_page?(nosotros_path) or current_page?(nosotros_equipo_path) or current_page?(nosotros_casos_de_exito_path) or current_page?(nosotros_herramientas_path)%>
 <nav class="cd-secondary-nav nuevo">
         <ul>
-            <li class="<%= 'active2' if current_page?(nosotros_equipo_path) %> cool"><a href="<%=nosotros_equipo_path %>">Equipo</a></li>
-            <li class="<%= 'active2' if current_page?(nosotros_casos_de_exito_path) %> cool"><a href="<%=nosotros_casos_de_exito_path %>">Casos de Éxito</a></li>
-            <li class="<%= 'active2' if current_page?(nosotros_herramientas_path) %> cool"><a href="<%=nosotros_herramientas_path %>">Herramientas</a></li>
+            <li class="<%= 'active2' if current_page?(nosotros_path) %> cool"><a href="#equipo">Equipo</a></li>
+            <li class="<%= 'active2' if current_page?(nosotros_path) %> cool"><a href="#casos">Casos de Éxito</a></li>
+            <!-- <li class="<#%= 'active2' if current_page?(nosotros_herramientas_path) %> cool"><a href="<#%=nosotros_herramientas_path %>">Herramientas</a></li> -->
         </ul>
     </nav> <!-- .cd-secondary-nav-->
 <% end %>

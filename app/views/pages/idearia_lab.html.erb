@@ -33,7 +33,7 @@
 
 
   <div class="w3-bar w3-black">
-    <button class="button button_back tablink active2" onclick="openCity(event,'London')">México</button>
+    <button class="button button_back tablink active3" onclick="openCity(event,'London')">México</button>
     <button class="button button_back tablink" onclick="openCity(event,'Paris')">Guatemala</button>
     <button class="button button_back tablink" onclick="openCity(event,'Tokyo')">Perú</button>
    	<button class="button button_back tablink" onclick="openCity(event,'Madrid')">Colombia</button>
@@ -73,7 +73,7 @@
 				<div class="imagina">
 					<%=image_tag "prueba.jpg" %>
 					<hr class="grenne">
-					<h2>Guillermo Muñoz</h2>
+					<h2>Memo Muñoz</h2>
 					<p>Director</p>
 
 					<div class="iconitos">
@@ -375,71 +375,79 @@
 <div class="row">
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConvaModal2">Aprende más!</button>
+			<%= image_tag "caso01.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConvaModal2">Aprende más</button>
 		</div>
 	</div>
 
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#CruzModal">Aprende más!</button>
+			<%= image_tag "caso05.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#CruzModal">Aprende más</button>
 		</div>
 	</div>
 
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ThelsaModal">Aprende más!</button>
+			<%= image_tag "caso02.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ThelsaModal">Aprende más</button>
 		</div>
 	</div>
 
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#TractorModal">Aprende más!</button>
+			<%= image_tag "caso03.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#TractorModal">Aprende más</button>
 		</div>
 	</div>
 
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#MasterModal">Aprende más!</button>
+			<%= image_tag "caso04.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#MasterModal">Aprende más</button>
 		</div>
 	</div>
 
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#BroseModal">Aprende más!</button>
+			<%= image_tag "caso06.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#BroseModal">Aprende más</button>
 		</div>
 	</div>
 
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#PraxairModal">Aprende más!</button>
+			<%= image_tag "caso07.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#PraxairModal">Aprende más</button>
 		</div>
 	</div>
 
 		<div class="col-md-3 col-sm-6">
 			<div id="casito">
-			<%= image_tag "cliente01.png" %>
-			<p>Julio 2017</p>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConagraModal">Aprende más!</button>
+			<%= image_tag "caso08.png" %>
+			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConagraModal">Aprende más</button>
 		</div>
 	</div>
 
 </div>
 	</div>
 </div>
+
+
+<div id="cuadrito">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<h2>
+				Nuestra visión es que Idearia Lab sea la agencia de innovación con mayor impacto en Latinoamérica.
+			</h2>
+			<p>
+			Creemos que es un buen comienzo.
+			</p>
+			<button type="button" class="button button_white" data-toggle="modal" data-target="#PhotoModal">Contáctanos!</button>
+		</div>
+	</div>
+</div>
+
 
 <%= render 'gandhi' %>
 <%= render 'azul' %>
@@ -459,9 +467,9 @@ function openCity(evt, cityName) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < x.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active2", "");
+      tablinks[i].className = tablinks[i].className.replace(" active3", "");
   }
   document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active2";
+  evt.currentTarget.className += " active3";
 }
 </script>
