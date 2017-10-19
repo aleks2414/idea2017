@@ -1,16 +1,22 @@
-<div>
-  <% flash.each do |key, value| %>
-    <div>
-      <a href="#" data-dismiss="alert">×</a>
-        <%= value %>
-    </div>
-  <% end %>
-</div>
-
-<div class="container">
 <div id="titulo" class="row">
-	<h2>En seguida nos pondremos en contacto</h2>
+	<div class="nein">
+	<h2>En seguida nos pondremos en contacto contigo</h2>
 	<hr>
 	<p>Gracias por comunicarte</p>
+
+						<div class="iconicos">
+						<%= link_to "mailto:contacto@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://www.facebook.com/idearialab/", :target => "_blank" do %>
+						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://twitter.com/idearialab", :target => "_blank" do %>
+						<span class="fa fa-twitter" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://medium.com/idearia-lab", :target => "_blank" do %>
+						<span class="fa fa-medium" aria-hidden="true"></span>
+						<% end %>
+					</div>
 </div>
 </div>

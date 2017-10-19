@@ -17,7 +17,7 @@ def hacemos
 	@contact = Contact.new
 end
 
-def entrenamiento
+def entrenamos
 	@contact = Contact.new
   
 end

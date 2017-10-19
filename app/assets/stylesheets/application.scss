@@ -550,9 +550,6 @@ clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
     h2 {
       font-size: 1.6em;
     }
-    p {
-      font-size: 12px;
-    }
   }
 }
 
@@ -563,9 +560,6 @@ clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
     }
     h2 {
       font-size: 1em;
-    }
-    p {
-      font-size: 10px;
     }
   }
 }
@@ -826,8 +820,9 @@ p.negro {
 #fotos {
   img {
     width: 100%;
-    -webkit-clip-path: polygon(14% 0, 100% 0%, 86% 100%, 0% 100%);
-    clip-path: polygon(14% 0, 100% 0%, 86% 100%, 0% 100%);
+
+background-repeat: no-repeat;
+text-align: center;
   }
   .imagina {
     padding: 20px;
@@ -961,4 +956,198 @@ hr.grenne {
   .n14 {
     background-image: image-url("iconins-14.png");
   }
+}
+
+#titulo {
+  height: 100vh;
+  text-align: center;
+  h2 {
+    color: #555;
+    text-transform: uppercase;
+  }
+  p {
+  }
+  .nein {
+    position: absolute;
+    
+    margin: 0 25%;
+    top: 50%;
+  }
+}
+
+.iconicos {
+  span {
+    font-size: 25px;
+    margin: 0 10px;
+    color: $red;
+  }
+}
+
+.nuop {
+  color: black;
+  font-size: 19px;
+}
+
+.jorge {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.jorge:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.memo {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.memo:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.alex {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.alex:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.neme {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.neme:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.alberto {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.alberto:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.marce {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.marce:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.marizu {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.marizu:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.jc {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.jc:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.chris {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.chris:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.migue {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.migue:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.alfredog {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.alfredog:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.alfredof {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("alfredo1.png");
+}
+
+.alfredof:hover {
+  background-image: image-url("alfredo2.png");
+}
+
+.joseh {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("iconins-14.png");
+}
+
+.joseh:hover {
+  background-image: image-url("iconins-13.png");
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+textarea.he {
+    height: 10rem !important;
 }

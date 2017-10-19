@@ -22,7 +22,7 @@
 			<%= f.text_field :city, required: true, placeholder: "Escribe el rol que tienes" %>
 
 			<br><br><br> Vi lo que ofrecen y me interesó:
-			<%= f.select :service, ['doing', 'training', 'academy']%>
+			<%= f.select :service, ['hacemos', 'entrenamos', 'academy']%>
 
 			<br> <br>En seguida les dejo mis datos para que puedan contactarme: <br>
 			teléfono: 
@@ -32,7 +32,7 @@
 
 			<br>
 			<br>
-			Y dejo comentarios adicionales:
+			Por cierto, les dejo comentarios adicionales:
 			<br>
 			<%= f.text_area :comments, placeholder: "Déjanos tus comentarios" %>
 			<br><br>
@@ -91,4 +91,24 @@
 
 </div>
 		</div>
+<br><br><br>
+
+						<div class="iconicos">
+						<%= link_to "mailto:contacto@idearialab.com?Subject=Solicitud%20de%20información" do %>
+						<span class="fa fa-envelope" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://www.facebook.com/idearialab/", :target => "_blank" do %>
+						<span class="fa fa-facebook" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://twitter.com/idearialab", :target => "_blank" do %>
+						<span class="fa fa-twitter" aria-hidden="true"></span>
+						<% end %>
+						<%= link_to "https://medium.com/idearia-lab", :target => "_blank" do %>
+						<span class="fa fa-medium" aria-hidden="true"></span>
+						<% end %>
+					</div>
+
+
 </div>
+
+
