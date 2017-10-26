@@ -614,6 +614,10 @@ clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
   }
 }
 
+.numi {
+  /*background-color: green;*/
+  height: 220px;
+}
 
 #numeros {
   padding: 50px 30px;
@@ -759,7 +763,7 @@ h4 {
   }
 
 #impacto {
-  padding: 90px 30px;
+  padding: 130px 30px;
   margin-top: 30px;
   background-color: white;
 -webkit-clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
@@ -1190,4 +1194,8 @@ clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
     color: #949494;
   }
   }
+}
+
+.quiero {
+  margin-bottom: 20px;
 }
