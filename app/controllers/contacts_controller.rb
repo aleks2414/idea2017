@@ -1,6 +1,12 @@
 class ContactsController < ApplicationController
 	def new
     @contact = Contact.new
+
+prepare_meta_tags(title: "Contacto | Idearia Lab Agencia de Innovación Latinoamericana",
+  description: "Contáctanos! Generemos diferenciación, crecimiento y transformación a través de la innovación en tu organización.", 
+  keywords: %w[Innovación en México, innovación en Guatemala, innovación en Perú, innovación en Latinoamérica, crecimiento de organizaciones, transformación de organizaciones, diferenciación.]
+)
+
   end
 
   def create
