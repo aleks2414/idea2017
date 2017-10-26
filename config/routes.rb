@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 get '/academy' => 'pages#academy'
 get '/nosotros' => 'pages#idearia_lab'
 get '/modelo_de_innovacion/hacemos' => 'pages#hacemos'
+get '/transformacion_digital' => 'pages#digital'
 get '/modelo_de_innovacion/entrenamos' => 'pages#entrenamos'
 get '/nosotros/equipo' => 'pages#equipo'
 get '/nosotros/casos_de_exito' => 'pages#casos_exito'

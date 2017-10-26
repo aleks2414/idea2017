@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82523004-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82523004-1');
+</script>
+    
   <title>Idearialab2017</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -25,12 +35,14 @@
 
         <ul id="cd-navigation">
             <li class="<%= 'active' if current_page?(modelo_de_innovacion_hacemos_path) or  current_page?(modelo_de_innovacion_entrenamos_path) %> hidden-sm hidden-xs"><a href="<%= modelo_de_innovacion_hacemos_path %>">Modelo de innovación</a></li>
+            <li class="<%= 'active' if current_page?(transformacion_digital_path) %>"><a href="<%= transformacion_digital_path %>">Transformación Digital</a></li>
             <li class="<%= 'active' if current_page?(academy_path) %> hidden-sm hidden-xs"><a href="<%= academy_path %>">Academy</a></li>
             <li class="<%= 'active' if current_page?(nosotros_path) or current_page?(nosotros_equipo_path) or current_page?(nosotros_casos_de_exito_path) or current_page?(nosotros_herramientas_path) %> hidden-sm hidden-xs"><a href="<%= nosotros_path %>">Nosotros</a></li>
             <li class="hidden-sm hidden-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
             <li class="<%= 'active' if current_page?(new_contact_path) %> hidden-sm hidden-xs"><a href="<%= new_contact_path %>">Contacto</a></li>
 
             <li class="visible-sm visible-xs"><a href="<%= modelo_de_innovacion_hacemos_path %>">Modelo de innovación</a></li>
+            <li class="visible-sm visible-xs"><a href="<%= transformacion_digital_path %>">Transformación Digital</a></li>
             <li class=" visible-sm visible-xs"><a href="<%= academy_path %>">Academy</a></li>
             <li class=" visible-sm visible-xs"><a href="<%= nosotros_path %>">Nosotros</a></li>
             <li class="visible-sm visible-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>

@@ -530,6 +530,10 @@ clip-path: polygon(0 12%, 100% 0%, 100% 100%, 0% 100%);
   }
   .equis {
     margin: 0;
+    color: #555;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 6px;
   }
 }
 
@@ -866,7 +870,7 @@ hr.grenne {
     text-align: left;
   }
   #casito {
-    background-color: white;
+    /*background-color: white;*/
     margin-bottom: 20px;
     padding: 20px;
     img {
@@ -984,8 +988,8 @@ hr.grenne {
 }
 
 .nuop {
-  color: black;
-  font-size: 19px;
+  color: #6A6C6C;
+  font-size: 17px;
 }
 
 .jorge {
@@ -1005,11 +1009,11 @@ hr.grenne {
   height: 300px;
   background-repeat: no-repeat;
   text-align: center;
-  background-image: image-url("iconins-14.png");
+  background-image: image-url("memo-1.png");
 }
 
 .memo:hover {
-  background-image: image-url("iconins-13.png");
+  background-image: image-url("memo-2.png");
 }
 
 .alex {
@@ -1029,11 +1033,11 @@ hr.grenne {
   height: 300px;
   background-repeat: no-repeat;
   text-align: center;
-  background-image: image-url("iconins-14.png");
+  background-image: image-url("neme-1.png");
 }
 
 .neme:hover {
-  background-image: image-url("iconins-13.png");
+  background-image: image-url("neme-2.png");
 }
 
 .alberto {
@@ -1053,11 +1057,11 @@ hr.grenne {
   height: 300px;
   background-repeat: no-repeat;
   text-align: center;
-  background-image: image-url("iconins-14.png");
+  background-image: image-url("marce-1.png");
 }
 
 .marce:hover {
-  background-image: image-url("iconins-13.png");
+  background-image: image-url("marce-2.png");
 }
 
 .marizu {
@@ -1077,11 +1081,11 @@ hr.grenne {
   height: 300px;
   background-repeat: no-repeat;
   text-align: center;
-  background-image: image-url("iconins-14.png");
+  background-image: image-url("jc-1.png");
 }
 
 .jc:hover {
-  background-image: image-url("iconins-13.png");
+  background-image: image-url("jc-2.png");
 }
 
 .chris {
@@ -1089,11 +1093,11 @@ hr.grenne {
   height: 300px;
   background-repeat: no-repeat;
   text-align: center;
-  background-image: image-url("iconins-14.png");
+  background-image: image-url("chris-1.png");
 }
 
 .chris:hover {
-  background-image: image-url("iconins-13.png");
+  background-image: image-url("chris-2.png");
 }
 
 .migue {
@@ -1150,4 +1154,40 @@ hr.grenne {
 
 textarea.he {
     height: 10rem !important;
+}
+
+#digital {
+  margin-top: 50px;
+}
+
+#desarrollo {
+  margin: 50px 0;
+  background-color: white;
+  -webkit-clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+  padding: 100px 0;
+  img {
+    width: 250px;
+  }
+  h2 {
+    color: #555;
+  }
+  h6 {
+    font-size: 16px;
+  }
+}
+
+#comos {
+  img {
+    width: 140px;
+  }
+  .comito {
+    height: 235px;
+  h4 {
+    color: #555;
+  }
+  h6 {
+    color: #949494;
+  }
+  }
 }
