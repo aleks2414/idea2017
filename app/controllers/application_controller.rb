@@ -14,14 +14,13 @@ before_action :prepare_meta_tags, if: "request.get?"
 
     # Let's prepare a nice set of defaults
     defaults = {
-      site:        site_name,
       title:       title,
       image:       image,
       revisit_after: "30 days",
       robots: "index,follow",
       distribution: "global",
       description: description,
-      keywords:    %w[Agencia de innovación, agencia de innovación en México, agencia de innovación en Guatemala, agencia de innovación en Perú, agencia de innovación en Latinoamérica, innovación, modelo de innovación, crecimiento de organizaciones, transformación de organizaciones, diferenciación, diseño de nuevos negocios, suite de innovación, estrategia de innovación, equipo de innovación, proceso de innovación, cultura de innovación, valor para el cliente, crecer rentabilidad, mejorar posicionamiento, ganar participación de mercado, proyectos de innovación, talleres de innovación, herramientas de innovación, asesoría en innovación, transformación digital, desarrollo web, desarrollo de apps, desarrollo de devops, desarrollo de plataformas web.],
+      keywords:    %w[agencia-de-innovación agencia-de-innovación-en-México agencia-de-innovación-en-Guatemala agencia-de-innovación-en-Perú agencia-de-innovación-en-Latinoamérica innovación modelo-de-innovación crecimiento-de-organizaciones transformación-de-organizaciones diferenciación diseño-de-nuevos-negocios suite-de-innovación estrategia-de-innovación equipo-de-innovación proceso-de-innovación cultura-de-innovación valor-para-el-cliente crecer-rentabilidad mejorar-posicionamiento ganar-participación-de-mercado proyectos-de-innovación talleres-de-innovación herramientas-de-innovación asesoría-en-innovación transformación-digital desarrollo-web desarrollo-de-apps desarrollo-de-devops desarrollo-de-plataformas-web.],
       twitter: {
         site_name: site_name,
         site: '@idearialab',
