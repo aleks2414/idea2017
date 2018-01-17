@@ -1,0 +1,53 @@
+
+<h3><%= @workshop.nombre %></h3>
+<p>Costo: $<%=@workshop.precio %> por persona</p>
+<p>Lugar: <%=@workshop.lugar %></p>
+<p>Fecha: <%=@workshop.fecha %></p>
+
+<div id="maex">
+<div class="tab">
+	  <button class="tablinks" onclick="openCity(event, 'Tokyo')" id="defaultOpen">Pay Pal</button>
+  <button class="tablinks" onclick="openCity(event, 'London')" >Depósito</button>
+</div>
+</div>
+
+<br><br>
+
+
+<div id="Tokyo" class="tabcontent">
+		<br>
+		<a href="https://www.paypal.me/IdeariaLab" class="button button_red">Pagar con PayPal</a> <br> <br> <br>
+	<p>Enviar el comprobante de pago a marcela@idearialab.com para registrar tu lugar.</p>
+</div>
+
+
+<div id="London" class="tabcontent">
+	<br>
+	<h5>Cuenta bancaria: BBVA</h5>
+<h5>No de cuenta: 0109118012</h5>
+<h5>Clabe Bancaria: 012180001091180121</h5>
+<br><br>
+<p>Enviar el comprobante de pago a marcela@idearialab.com para registrar tu lugar.</p>
+<br>
+</div>
+
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>

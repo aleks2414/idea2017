@@ -800,6 +800,18 @@ p.negro {
   }
 }
 
+#contactito2 {
+  input[type="url"],input[type="date"],input[type="name"], input[type="email"], input[type="textbox"], input[type="number"], input[type="tel"], input[type="text"], input[type="password"], textarea, select {
+  width: 60%;
+  height: 3.5rem;
+  border:none;
+  /*border-bottom:1.3px solid #dadada;*/
+  margin-bottom: 1.5rem;
+  background-color: #fafafa !important;
+  padding-left: 5px;
+  }
+}
+
 .float_right {
   float: right;
     margin-top: -51px;
@@ -1362,4 +1374,54 @@ select {
     p {
     color: #b6b6b6;
   }
+}
+
+#preciok {
+  margin: 10rem 0;
+  padding: 3rem 0;
+  background-color: #f5f5f5;
+  h4{
+    font-size: 3em;
+  }
+    p {
+    color: #b6b6b6;
+  }
+}
+
+
+#maex {
+  text-align: center;
+  .tab button:hover {
+    background-color: #ebebeb;
+}
+
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: white;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 85px;
+    padding: 14px 0;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 0px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: $red;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    border-bottom: solid 2px $blue;
 }
