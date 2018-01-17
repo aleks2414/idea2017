@@ -96,8 +96,20 @@
 
   <div class="field">
     <%= f.label :imagen %><br>
+    <%= @workshop.imagen if @workshop.imagen %>
+    <br><br>
     <%= f.file_field :imagen %>
+    <%= f.hidden_field :imagen_cache %>
   </div>
+
+  <div class="field">
+    <%= f.label :pdf %><br>
+    <%= @workshop.q_ic1 if @workshop.q_ic1 %>
+    <br><br>
+    <%= f.file_field :q_ic1 %>
+    <%= f.hidden_field :q_ic1_cache %>
+  </div>
+
 </div>
 
 <div id="formarios">
@@ -193,9 +205,13 @@
     <%= f.label :semblanza %><br>
     <%= f.text_area :cv %>
   </div>
+
   <div class="field">
     <%= f.label :foto_del_expositor %><br>
+    <%= @workshop.foto if @workshop.foto %>
+    <br><br>
     <%= f.file_field :foto %>
+    <%= f.hidden_field :foto_cache %>
   </div>
 </div>
 
@@ -211,14 +227,7 @@
   </div>
  </div>
   
- <div class="col-md-4">
-  <div class="field">
-    <%= f.label :qué_me_llevo_icono_1 %><br>
-    <%= f.file_field :q_ic1 %>
-  </div>
- </div>
-  
- <div class="col-md-4">
+ <div class="col-md-8">
   <div class="field">
     <%= f.label :qué_me_llevo_descripción_1 %><br>
     <%= f.text_field :q_des1 %>
@@ -232,14 +241,7 @@
   </div>
  </div>
   
- <div class="col-md-4">
-  <div class="field">
-    <%= f.label :qué_me_llevo_icono_2 %><br>
-    <%= f.file_field :q_ic2 %>
-  </div>
- </div>
-  
- <div class="col-md-4">
+ <div class="col-md-8">
   <div class="field">
     <%= f.label :qué_me_llevo_descripción_2 %><br>
     <%= f.text_field :q_des2 %>
@@ -253,14 +255,7 @@
   </div>
  </div>
   
- <div class="col-md-4">
-  <div class="field">
-    <%= f.label :qué_me_llevo_icono_3 %><br>
-    <%= f.file_field :q_ic3 %>
-  </div>
- </div>
-  
- <div class="col-md-4">
+ <div class="col-md-8">
   <div class="field">
     <%= f.label :qué_me_llevo_descripción_3 %><br>
     <%= f.text_field :q_des3 %>
@@ -274,14 +269,7 @@
   </div>
  </div>
   
- <div class="col-md-4">
-  <div class="field">
-    <%= f.label :qué_me_llevo_icono_4 %><br>
-    <%= f.file_field :q_ic4 %>
-  </div>
- </div>
-  
- <div class="col-md-4">
+ <div class="col-md-8">
   <div class="field">
     <%= f.label :qué_me_llevo_descripción_4 %><br>
     <%= f.text_field :q_des4 %>

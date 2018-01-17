@@ -9,7 +9,10 @@
 <div id="bannir">
   <div class="row">
     <div class="col-md-6">
-        <%= image_tag "prueba.jpg" %>
+        <%= image_tag @workshop.imagen.url %>
+        <% if @workshop.q_ic1.present? %>
+        <%= link_to "Descargar Infografía", @workshop.q_ic1_url %>
+        <% end %>
     </div>
     <div class="col-md-6">
         <h2>¿Qué me llevo del curso?</h2>
@@ -145,7 +148,7 @@
   <div id="facilitador">
     <div class="row">
       <div class="col-md-6">
-        <%= image_tag "prueba.jpg" %>
+        <%= image_tag @workshop.foto.url %>
       </div>
       <div class="col-md-6">
         <div id="fac_der">

@@ -26,6 +26,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'mail_form'
 gem 'meta-tags'
 gem 'friendly_id', '~> 5.1.0'
+gem 'carrierwave', '~> 1.0'
+gem "figaro"
+gem "fog-aws"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
