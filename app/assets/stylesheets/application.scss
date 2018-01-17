@@ -1217,3 +1217,149 @@ clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
 .quiero {
   margin-bottom: 20px;
 }
+
+
+
+#formarios {
+  text-align: left;
+  margin: 5rem 0;
+  background-color: white;
+  box-shadow: 0 2px 2px 0 $red, 0 3px 1px -2px$red, 0 1px 5px 0 $red;
+  padding: 3rem 3rem 0;
+      border-radius: 0px;
+      border: solid 1px #e2e8ea;
+      -webkit-box-shadow: 6px 6px 2px rgba(46,133,155,0.04);
+      box-shadow: 6px 6px 2px rgba(46,133,155,0.04);
+
+h2, h1 {
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-size: 100%;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: $red;
+  padding: 20px 0;
+  a {
+    color: white;
+  }
+}
+
+input[type="date"],input[type="name"], input[type="email"], input[type="textbox"], input[type="number"], input[type="tel"], input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  height: 3.5rem;
+  border:none;
+  border:1.3px solid #dadada;
+  margin-bottom: 1.5rem;
+  padding-left: 10px;
+  background-color: white !important;
+  color: #555;
+  }
+
+select {
+  height: 3.5rem;
+  border:none;
+  border:1.3px solid #dadada;
+  margin-bottom: 1.5rem;
+  background-color: white !important;
+  color: #555;
+  }
+
+  textarea {
+    height: 20rem !important;
+  }
+  label {
+  margin-top: 1rem;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #555;
+}
+}
+
+#fondi{
+  background-color: #272960;
+  padding: 100px 0;
+  h1 {
+    color: white;
+  }
+  hr {
+   border-color: $grey;
+   border-width: 1px;
+  }
+  p {
+    color: #d2d2d2;
+  }
+}
+
+#bannir {
+  background-color: #f9f9f9;
+  margin: 5rem 0;
+  img {
+    width: 300px;
+  }
+  h2 {
+    text-align: left;
+    color: #555;
+  }
+  .que_me {
+    margin-top: 30px;
+    text-align: left;
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+}
+
+#formato {
+  padding: 11rem 8rem;
+  background-color: white;
+  border: solid 3px #282a5f;
+  img {
+    width: 200px;
+  }
+}
+
+#numerosi {
+  padding: 10rem 0;
+  
+  img  {
+    width: 200px;
+  }
+}
+
+#general_info {
+  padding: 4rem;
+  background-color: #282a5f;
+  color: white;
+  text-align: left;
+  p {
+    color: #b6b6b6;
+  }
+
+  #cuadrix {
+    margin-top: 35px;
+  }
+}
+
+#facilitador {
+  margin: 11rem 0;
+  img {
+    width: 400px;
+  }
+  h2, h5, p {
+    text-align: left;
+  }
+}
+
+#precio {
+  padding: 10rem 0;
+  background-color: #282a5f;
+  h4{
+    font-size: 3em;
+  }
+    p {
+    color: #b6b6b6;
+  }
+}

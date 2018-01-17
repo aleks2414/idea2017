@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :workshops
 get '/academy' => 'pages#academy'
 get '/nosotros' => 'pages#idearia_lab'
 get '/modelo_de_innovacion/hacemos' => 'pages#hacemos'

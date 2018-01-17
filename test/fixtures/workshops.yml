@@ -1,0 +1,83 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  frase: MyString
+  fecha: 2018-01-16 11:39:13
+  lugar: MyString
+  horario: MyString
+  formato: MyString
+  precio: MyString
+  num_meto: MyString
+  num_dina: MyString
+  num_herra: MyString
+  dirigido: MyText
+  descripcion: MyText
+  detalles: MyText
+  expositor: MyString
+  puesto: MyString
+  cv: MyText
+  foto: MyString
+  test_link: MyString
+  imagen: MyString
+  q_tit1: MyString
+  q_ic1: MyString
+  q_des1: MyString
+  q_tit2: MyString
+  q_ic2: MyString
+  q_des2: MyString
+  q_tit3: MyString
+  q_ic3: MyString
+  q_des3: MyString
+  q_tit4: MyString
+  q_ic4: MyString
+  q_des4: MyString
+  des_tit1: MyString
+  des_des1: MyString
+  des_tit2: MyString
+  des_des2: MyString
+  des_tit3: MyString
+  des_des3: MyString
+  des_tit4: MyString
+  des_des4: MyString
+
+two:
+  nombre: MyString
+  frase: MyString
+  fecha: 2018-01-16 11:39:13
+  lugar: MyString
+  horario: MyString
+  formato: MyString
+  precio: MyString
+  num_meto: MyString
+  num_dina: MyString
+  num_herra: MyString
+  dirigido: MyText
+  descripcion: MyText
+  detalles: MyText
+  expositor: MyString
+  puesto: MyString
+  cv: MyText
+  foto: MyString
+  test_link: MyString
+  imagen: MyString
+  q_tit1: MyString
+  q_ic1: MyString
+  q_des1: MyString
+  q_tit2: MyString
+  q_ic2: MyString
+  q_des2: MyString
+  q_tit3: MyString
+  q_ic3: MyString
+  q_des3: MyString
+  q_tit4: MyString
+  q_ic4: MyString
+  q_des4: MyString
+  des_tit1: MyString
+  des_des1: MyString
+  des_tit2: MyString
+  des_des2: MyString
+  des_tit3: MyString
+  des_des3: MyString
+  des_tit4: MyString
+  des_des4: MyString

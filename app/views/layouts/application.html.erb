@@ -38,14 +38,14 @@
         <ul id="cd-navigation">
             <li class="<%= 'active' if current_page?(modelo_de_innovacion_hacemos_path) or  current_page?(modelo_de_innovacion_entrenamos_path) %> hidden-sm hidden-xs"><a href="<%= modelo_de_innovacion_hacemos_path %>">Modelo de innovación</a></li>
             <li class="<%= 'active' if current_page?(transformacion_digital_path) %> hidden-sm hidden-xs"><a href="<%= transformacion_digital_path %>">Transformación Digital</a></li>
-            <li class="<%= 'active' if current_page?(academy_path) %> hidden-sm hidden-xs"><a href="<%= academy_path %>">Academy</a></li>
+            <li class="<%= 'active' if current_page?(workshops_path) %> hidden-sm hidden-xs"><a href="<%= workshops_path %>">Academy</a></li>
             <li class="<%= 'active' if current_page?(nosotros_path) or current_page?(nosotros_equipo_path) or current_page?(nosotros_casos_de_exito_path) or current_page?(nosotros_herramientas_path) %> hidden-sm hidden-xs"><a href="<%= nosotros_path %>">Nosotros</a></li>
             <li class="hidden-sm hidden-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
             <li class="<%= 'active' if current_page?(new_contact_path) %> hidden-sm hidden-xs"><a href="<%= new_contact_path %>">Contacto</a></li>
 
             <li class="visible-sm visible-xs"><a href="<%= modelo_de_innovacion_hacemos_path %>">Modelo de innovación</a></li>
             <li class="visible-sm visible-xs"><a href="<%= transformacion_digital_path %>">Transformación Digital</a></li>
-            <li class=" visible-sm visible-xs"><a href="<%= academy_path %>">Academy</a></li>
+            <li class=" visible-sm visible-xs"><a href="<%= workshops_path %>">Academy</a></li>
             <li class=" visible-sm visible-xs"><a href="<%= nosotros_path %>">Nosotros</a></li>
             <li class="visible-sm visible-xs"><%= link_to "Blog", "https://medium.com/idearia-lab", :target => "_blank" %></li>
             <li class=" visible-sm visible-xs"><a href="<%= new_contact_path %>">Contacto</a></li>
@@ -61,11 +61,11 @@
     </nav> <!-- .cd-secondary-nav-->
 <% end %>
 
-<%# if current_page?(academy_path) %>
+<%# if current_page?(workshops_path) %>
 <!-- <nav class="cd-secondary-nav nuevo">
         <ul>
-            <li class="<%#= 'active2' if current_page?(academy_path) %> cool"><a href="<%#=academy_path %>">Talleres Inhouse</a></li>
-            <li class="<%#= 'active2' if current_page?(academy_path) %> cool"><a href="<%#=academy_path %>">Talleres Abiertos</a></li>
+            <li class="<%#= 'active2' if current_page?(workshops_path) %> cool"><a href="<%#=workshops_path %>">Talleres Inhouse</a></li>
+            <li class="<%#= 'active2' if current_page?(workshops_path) %> cool"><a href="<%#=workshops_path %>">Talleres Abiertos</a></li>
         </ul>
     </nav> <!-- .cd-secondary-nav-->
  <%# end %>
@@ -234,7 +234,7 @@
             <li>
               <h6><%= link_to "Modelo de Innovación", modelo_de_innovacion_hacemos_path  %></h6>
               <h6><%= link_to "Transformación Digital", transformacion_digital_path  %></h6>
-              <h6><%= link_to "Academy", academy_path %></h6>
+              <h6><%= link_to "Academy", workshops_path %></h6>
               <h6><%= link_to "Nosotros", nosotros_path  %></h6>
               <h6><%= link_to "Equipo",  nosotros_path%></h6>
               <h6><%= link_to "Casos de Éxito",  nosotros_path%></h6>

@@ -1,0 +1,2 @@
+json.extract! workshop, :id, :nombre, :frase, :fecha, :lugar, :horario, :formato, :precio, :num_meto, :num_dina, :num_herra, :dirigido, :descripcion, :detalles, :expositor, :puesto, :cv, :foto, :test_link, :imagen, :q_tit1, :q_ic1, :q_des1, :q_tit2, :q_ic2, :q_des2, :q_tit3, :q_ic3, :q_des3, :q_tit4, :q_ic4, :q_des4, :des_tit1, :des_des1, :des_tit2, :des_des2, :des_tit3, :des_des3, :des_tit4, :des_des4, :created_at, :updated_at
+json.url workshop_url(workshop, format: :json)

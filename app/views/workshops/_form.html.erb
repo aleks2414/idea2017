@@ -1,0 +1,296 @@
+<%= form_for(@workshop) do |f| %>
+  <% if @workshop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workshop.errors.count, "error") %> prohibited this workshop from being saved:</h2>
+
+      <ul>
+      <% @workshop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div id="formarios">
+  <div class="field">
+    <%= f.label :nombre_de_taller %><br>
+    <%= f.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= f.label :frase_pegadora %><br>
+    <%= f.text_field :frase %>
+  </div>
+
+</div>
+
+<div id="formarios">
+  <div class="row">
+  
+  <div class="col-md-6">
+  <div class="field">
+    <%= f.label :fecha_de_taller %><br>
+    <%= f.date_field :fecha %>
+  </div>
+  </div>
+  
+  <div class="col-md-6">
+  <div class="field">
+    <%= f.label :lugar_del_taller %><br>
+    <%= f.text_field :lugar %>
+  </div>
+  </div>
+  
+  <div class="col-md-6">
+  <div class="field">
+    <%= f.label :horario_del_taller %><br>
+    <%= f.text_field :horario %>
+  </div>
+  </div>
+  
+  <div class="col-md-6">
+  <div class="field">
+    <%= f.label :formato_del_taller %><br>
+    <%= f.select :formato, [["Presencial"], ["En línea"]], {:prompt => 'Formato del taller'} %>
+    </div>
+  </div>
+  </div>
+    <div class="field">
+    <%= f.label :precio_del_taller %><br>
+    <%= f.text_field :precio %>
+  </div>
+</div>
+
+
+<div id="formarios">
+ <div class="row">
+  <div class="col-md-4">
+  <div class="field">
+    <%= f.label :número_de_metodologías %><br>
+    <%= f.select :num_meto, [["1"], ["2"], ["3"], ["4"], ["5"], ["+5"]], {:prompt => 'Número de metodologías'} %>
+  </div>
+  </div>
+  
+  <div class="col-md-4">
+  <div class="field">
+    <%= f.label :número_de_dinámicas %><br>
+    <%= f.select :num_dina, [["1"], ["2"], ["3"], ["4"], ["5"], ["+5"]], {:prompt => 'Número de dinámicas'} %>
+  </div>
+  </div>
+  
+  <div class="col-md-4">
+  <div class="field">
+    <%= f.label :número_de_herramientas %><br>
+    <%= f.select :num_herra, [["1"], ["2"], ["3"], ["4"], ["5"], ["+5"]], {:prompt => 'Número de herramientas'} %>
+  </div>
+  </div>
+
+  </div> 
+</div>
+
+<div id="formarios">
+  <div class="field">
+    <%= f.label :A_quién_va_dirigido %><br>
+    <%= f.text_area :dirigido %>
+  </div>
+
+  <div class="field">
+    <%= f.label :imagen %><br>
+    <%= f.file_field :imagen %>
+  </div>
+</div>
+
+<div id="formarios">
+  <div class="field">
+    <%= f.label :descripcion_del_taller %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :link_del_test %><br>
+    <%= f.text_field :test_link %>
+  </div>
+<hr>
+
+<div class="row">
+
+
+<div class="col-md-4">
+<div class="field">
+    <%= f.label :razon_para_ir_al_taller_1 %><br>
+    <%= f.text_field :des_tit1 %>
+  </div>
+</div>
+  
+  <div class="col-md-8">
+  <div class="field">
+    <%= f.label :descripción_de_razón_1 %><br>
+    <%= f.text_field :des_des1 %>
+  </div>
+</div>
+ 
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :razon_para_ir_al_taller_2 %><br>
+    <%= f.text_field :des_tit2 %>
+  </div>
+</div>
+  
+  <div class="col-md-8">
+  <div class="field">
+    <%= f.label :descripción_de_razón_2 %><br>
+    <%= f.text_field :des_des2 %>
+  </div>
+</div>
+  
+  <div class="col-md-4">
+  <div class="field">
+    <%= f.label :razon_para_ir_al_taller_3 %><br>
+    <%= f.text_field :des_tit3 %>
+  </div>
+</div>
+  
+  <div class="col-md-8">
+  <div class="field">
+    <%= f.label :descripción_de_razón_3 %><br>
+    <%= f.text_field :des_des3 %>
+  </div>
+</div>
+  
+  <div class="col-md-4">
+  <div class="field">
+    <%= f.label :razon_para_ir_al_taller_4 %><br>
+    <%= f.text_field :des_tit4 %>
+  </div>
+</div>
+  
+  <div class="col-md-8">
+  <div class="field">
+    <%= f.label :descripción_de_razón_4 %><br>
+    <%= f.text_field :des_des4 %>
+  </div>
+</div>
+
+</div>
+
+  <div class="field">
+    <%= f.label :detalles_de_cómo_tomar_el_taller %><br>
+    <%= f.text_area :detalles %>
+  </div>
+
+</div>
+
+
+<div id="formarios">
+  <div class="field">
+    <%= f.label :nombre_del_expositor %><br>
+    <%= f.text_field :expositor %>
+  </div>
+  <div class="field">
+    <%= f.label :puesto_del_expositor %><br>
+    <%= f.text_field :puesto %>
+  </div>
+  <div class="field">
+    <%= f.label :semblanza %><br>
+    <%= f.text_area :cv %>
+  </div>
+  <div class="field">
+    <%= f.label :foto_del_expositor %><br>
+    <%= f.file_field :foto %>
+  </div>
+</div>
+
+
+
+<div id="formarios">
+  <div class="row">
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_titulo_1 %><br>
+    <%= f.text_field :q_tit1 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_icono_1 %><br>
+    <%= f.file_field :q_ic1 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_descripción_1 %><br>
+    <%= f.text_field :q_des1 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_titulo_2 %><br>
+    <%= f.text_field :q_tit2 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_icono_2 %><br>
+    <%= f.file_field :q_ic2 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_descripción_2 %><br>
+    <%= f.text_field :q_des2 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_titulo_3 %><br>
+    <%= f.text_field :q_tit3 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_icono_3 %><br>
+    <%= f.file_field :q_ic3 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_descripción_3 %><br>
+    <%= f.text_field :q_des3 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_titulo_4 %><br>
+    <%= f.text_field :q_tit4 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_icono_4 %><br>
+    <%= f.file_field :q_ic4 %>
+  </div>
+ </div>
+  
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :qué_me_llevo_descripción_4 %><br>
+    <%= f.text_field :q_des4 %>
+  </div>
+ </div>
+  </div>
+</div>
+
+  <div class="actions">
+    <%= f.submit class: "button button_red" %>
+  </div>
+<% end %>
