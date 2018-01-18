@@ -12,7 +12,7 @@ get '/nosotros/casos_de_exito' => 'pages#casos_exito'
 get '/nosotros/herramientas' => 'pages#herramientas'
 
 resources :contacts, only: [:new, :create]
-
+mount Ckeditor::Engine => '/ckeditor'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
