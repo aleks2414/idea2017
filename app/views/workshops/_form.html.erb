@@ -215,6 +215,19 @@
   </div>
 </div>
 
+<div id="formarios">
+  <%= f.fields_for :blocks do |block| %>
+
+  <%= render "block_fields", f: block %>
+
+  <% end %>
+      <br>
+      <div class="links">
+        <%= link_to_add_association 'Añadir Módulo', f, :blocks, class: "button button_blue" %>
+      </div>
+      <br>
+</div>
+
 
 
 <div id="formarios">

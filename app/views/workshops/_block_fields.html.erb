@@ -1,0 +1,26 @@
+<div class="nested-fields">
+<div class="row">
+  <div class="col-md-4">
+  <div class="field">
+    <%= f.label :título_del_módulo %><br>
+    <%= f.text_field :title %>
+  </div>
+  </div>
+
+  <div class="col-md-4">
+  <div class="field">
+    <%= f.label :contenido_del_módulo %><br>
+    <%= f.text_field :content %>
+  </div>
+  </div>
+
+ <div class="col-md-4">
+  <div class="field">
+    <%= f.label :duración_del_módulo %><br>
+    <%= f.text_field :duration %>
+  </div>
+  </div>
+
+<%= link_to_remove_association "Quitar Modulo", f %>
+</div>
+</div>

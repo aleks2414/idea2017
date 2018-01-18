@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :blocks
   resources :workshops
 get '/academy' => 'pages#academy'
 get '/nosotros' => 'pages#idearia_lab'

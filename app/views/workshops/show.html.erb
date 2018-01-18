@@ -13,6 +13,7 @@
   </div>
 </div>
 
+<div class="container">
 <div id="bannir">
   <div class="row">
     <div class="col-md-6">
@@ -46,30 +47,30 @@
     </div>
   </div>
 </div>
-
+</div>
 
 <div class="container">
 <div id="formato">
   <div class="row">
-    <div class="col-sm-3 col-xs-6">
+    <div class="col-sm-3 col-xs-6 next">
       <%= image_tag "icon_w-01.png" %>
       <h4>Fecha del taller:</h4>
       <p><%= @workshop.fecha.strftime("%x") %></p>
     </div>
 
-    <div class="col-sm-3 col-xs-6">
+    <div class="col-sm-3 col-xs-6 next">
       <%= image_tag "icon_w-02.png" %>
       <h4>Lugar del taller:</h4>
       <p><%= @workshop.lugar %></p>
     </div>
 
-    <div class="col-sm-3 col-xs-6">
+    <div class="col-sm-3 col-xs-6 next">
       <%= image_tag "icon_w-03.png" %>
       <h4>Horario del taller:</h4>
       <p><%= @workshop.horario %></p>
     </div>
 
-    <div class="col-sm-3 col-xs-6">
+    <div class="col-sm-3 col-xs-6 next">
       <%= image_tag "icon_w-04.png" %>
       <h4>Formato del taller:</h4>
       <p><%= @workshop.formato %></p>
@@ -81,17 +82,17 @@
 
 <div id="numerosi">
   <div class="row">
-    <div class="col-md-2 col-md-offset-3">
+    <div class="col-md-2 col-xs-6 col-md-offset-3">
       <%= image_tag "icon_w-05.png" %>
       <p><%=@workshop.num_meto %> metodologías</p>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-md-2 col-xs-6">
       <%= image_tag "icon_w-06.png" %>
       <p><%=@workshop.num_dina %> dinámicas</p>
     </div>
 
-    <div class="col-md-2">
+    <div class="col-md-2 col-xs-6">
       <%= image_tag "icon_w-07.png" %>
       <p><%=@workshop.num_herra %> herramientas</p>
     </div>
@@ -179,6 +180,22 @@
   </div>
 </div>
 
+<div id="bloques">
+<div class="container">
+  <h1>Módulos del taller</h1>
+  <hr>
+  <% @workshop.blocks.each_with_index do |block, i| %>
+    <div class="col-md-4">
+      <div id="cerca">
+        <h3><%=i+1%></h3>
+        <h5 class="center"><%=block.title%></h5>
+        <p><%=block.content%></p>
+        <h4><%=block.duration%></h4>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
 
 <div class="container">
   <button type="button" class="button button_blue" data-toggle="modal" data-target="#Photo3Modal">Quiero inscribirme!</button>

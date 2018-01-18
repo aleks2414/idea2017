@@ -1430,3 +1430,20 @@ select {
 .white {
   color: white;
 }
+
+#bloques {
+  margin: 5rem 0;
+
+  #cerca{
+    margin-top: 20px;
+    padding: 1.5%;
+    background-color: white;
+    height: 250px;
+    border-bottom: solid 3px #dadada;
+    border-right: solid 3px #dadada;
+  }
+}
+
+.next {
+  height: 250px;
+}

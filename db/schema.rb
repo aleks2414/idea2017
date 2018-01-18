@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116191837) do
+ActiveRecord::Schema.define(version: 20180118144308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blocks", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "duration"
+    t.integer  "workshop_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "blocks", ["workshop_id"], name: "index_blocks_on_workshop_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -94,4 +105,5 @@ ActiveRecord::Schema.define(version: 20180116191837) do
 
   add_index "workshops", ["slug"], name: "index_workshops_on_slug", unique: true, using: :btree
 
+  add_foreign_key "blocks", "workshops"
 end

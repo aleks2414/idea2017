@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require ckeditor/init
+//= require cocoon
 //= require_tree .
 
 
