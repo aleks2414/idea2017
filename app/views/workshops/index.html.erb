@@ -21,7 +21,7 @@
   <div class="col-md-3 col-sm-6">
     <div id="mini" class="n<%=i+1%>">
       <h4><%= workshop.nombre %></h4>
-      <p><%= workshop.fecha %></p>
+      <p class="white"><%= workshop.fecha.strftime("%x") %></p>
     </div>
   </div>
   <% end %>
