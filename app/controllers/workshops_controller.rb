@@ -12,6 +12,7 @@ class WorkshopsController < ApplicationController
   # GET /workshops/1.json
   def show
     @contact = Contact.new
+    @workshops = Workshop.where("fecha > ?", @workshop.fecha).order('id ASC').limit(2)
   end
 
   # GET /workshops/new
