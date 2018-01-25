@@ -2,81 +2,81 @@
   <div class="backi">
     <h1><%=@workshop.nombre %></h1>
     <p><%=@workshop.frase %></p>
-        <div id="contactito2">
-        <%= form_for @contact do |f| %>
-            <%= f.email_field :email, required: true, placeholder: "Déjanos tu correo electrónico" %>
-              <div class="actions">
-                  <%= f.submit "Quiero saber más", class: "button button_red" %>
-              </div>
-        <% end %>
-        </div>
-  </div>
-</div>
-
-<div class="container">
-<div id="bannir">
-  <div class="row">
-    <div class="col-md-6">
-        <%= image_tag @workshop.imagen.url %>
-    </div>
-    <div class="col-md-6">
-        <h2>¿Qué me llevo del curso?</h2>
-
-          <div class="que_me">
-          <h3><%= @workshop.q_tit1 %></h3>
-          <p><%= @workshop.q_des1 %></p>
-          </div>
-
-          <div class="que_me">
-          <h3><%= @workshop.q_tit2 %></h3>
-          <p><%= @workshop.q_des2 %></p>
-          </div>
-
-          <div class="que_me">
-          <h3><%= @workshop.q_tit3 %></h3>
-          <p><%= @workshop.q_des3 %></p>
-          </div>
-
-          <div class="que_me">
-          <h3><%= @workshop.q_tit4 %></h3>
-          <p><%= @workshop.q_des4 %></p>
-          </div> <br>
-      <% if @workshop.q_ic1.present? %>
-        <%= link_to "Descargar PDF del taller", @workshop.q_ic1_url, class: "button button_red" %>
+    <div id="contactito2">
+      <%= form_for @contact do |f| %>
+      <%= f.email_field :email, required: true, placeholder: "Déjanos tu correo electrónico" %>
+      <div class="actions">
+        <%= f.submit "Quiero saber más", class: "button button_red" %>
+      </div>
       <% end %>
     </div>
   </div>
 </div>
-</div>
 
 <div class="container">
-<div id="formato">
-  <div class="row">
-    <div class="col-sm-3 col-xs-6 next">
-      <%= image_tag "icon_w-01.png" %>
-      <h4>Fecha del taller:</h4>
-      <p><%= @workshop.fecha.strftime("%x") %></p>
-    </div>
+  <div id="bannir">
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_tag @workshop.imagen.url %>
+      </div>
+      <div class="col-md-6">
+        <h2>¿Qué me llevo del curso?</h2>
 
-    <div class="col-sm-3 col-xs-6 next">
-      <%= image_tag "icon_w-02.png" %>
-      <h4>Lugar del taller:</h4>
-      <p><%= @workshop.lugar %></p>
-    </div>
+        <div class="que_me">
+          <h3><%= @workshop.q_tit1 %></h3>
+          <p><%= @workshop.q_des1 %></p>
+        </div>
 
-    <div class="col-sm-3 col-xs-6 next">
-      <%= image_tag "icon_w-03.png" %>
-      <h4>Horario del taller:</h4>
-      <p><%= @workshop.horario %></p>
-    </div>
+        <div class="que_me">
+          <h3><%= @workshop.q_tit2 %></h3>
+          <p><%= @workshop.q_des2 %></p>
+        </div>
 
-    <div class="col-sm-3 col-xs-6 next">
-      <%= image_tag "icon_w-04.png" %>
-      <h4>Formato del taller:</h4>
-      <p><%= @workshop.formato %></p>
+        <div class="que_me">
+          <h3><%= @workshop.q_tit3 %></h3>
+          <p><%= @workshop.q_des3 %></p>
+        </div>
+
+        <div class="que_me">
+          <h3><%= @workshop.q_tit4 %></h3>
+          <p><%= @workshop.q_des4 %></p>
+        </div> <br>
+        <% if @workshop.q_ic1.present? %>
+        <%= link_to "Descargar PDF del taller", @workshop.q_ic1_url, class: "button button_red" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div id="formato">
+    <div class="row">
+      <div class="col-sm-3 col-xs-6 next">
+        <%= image_tag "icon_w-01.png" %>
+        <h4>Fecha del taller:</h4>
+        <p><%= @workshop.fecha.strftime("%x") %></p>
+      </div>
+
+      <div class="col-sm-3 col-xs-6 next">
+        <%= image_tag "icon_w-02.png" %>
+        <h4>Lugar del taller:</h4>
+        <p><%= @workshop.lugar %></p>
+      </div>
+
+      <div class="col-sm-3 col-xs-6 next">
+        <%= image_tag "icon_w-03.png" %>
+        <h4>Horario del taller:</h4>
+        <p><%= @workshop.horario %></p>
+      </div>
+
+      <div class="col-sm-3 col-xs-6 next">
+        <%= image_tag "icon_w-04.png" %>
+        <h4>Formato del taller:</h4>
+        <p><%= @workshop.formato %></p>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -104,62 +104,53 @@
   <br><br>
 </div>
 
-  <div id="preciok">
-    <h3>No estás seguro todavía? Aplica este test…</h3>
-    <hr>
-    <%= link_to "¿Necesito el taller?", @workshop.test_link, class: "button button_red" %> <br><br>
+<div id="preciok">
+  <h3>No estás seguro todavía? Aplica este test…</h3>
+  <hr>
+  <%= link_to "¿Necesito el taller?", @workshop.test_link, class: "button button_red" %> <br><br>
+</div>
+
+<div class="container">
+  <div id="general_info">
+    <h2>¿A quién va dirigido?</h2>
+    <p><%=@workshop.dirigido %></p> <br>
+
+    <h2>Descripción del Taller</h2>
+    <p><%=@workshop.descripcion %></p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div id="cuadrix">
+          <h4><%= @workshop.des_tit1 %></h4>
+          <p><%= @workshop.des_des1 %></p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div id="cuadrix">
+          <h4><%= @workshop.des_tit2 %></h4>
+          <p><%= @workshop.des_des2 %></p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div id="cuadrix">
+          <h4><%= @workshop.des_tit3 %></h4>
+          <p><%= @workshop.des_des3 %></p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div id="cuadrix">
+          <h4><%= @workshop.des_tit4 %></h4>
+          <p><%= @workshop.des_des4 %></p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2>Detalles de cómo tomar el taller:</h2>
+    <p><%= @workshop.detalles.html_safe %></p>
   </div>
-
-<div class="container">
-<div id="general_info">
-  <h2>¿A quién va dirigido?</h2>
-  <p><%=@workshop.dirigido %></p>
-</div>
-</div>
-
-<div class="container">
-<div id="general_info">
-  <h2>Descripción del Taller</h2>
-  <p><%=@workshop.descripcion %></p>
-
-  <div class="row">
-    <div class="col-md-6">
-      <div id="cuadrix">
-        <h4><%= @workshop.des_tit1 %></h4>
-        <p><%= @workshop.des_des1 %></p>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div id="cuadrix">
-        <h4><%= @workshop.des_tit2 %></h4>
-        <p><%= @workshop.des_des2 %></p>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div id="cuadrix">
-        <h4><%= @workshop.des_tit3 %></h4>
-        <p><%= @workshop.des_des3 %></p>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div id="cuadrix">
-        <h4><%= @workshop.des_tit4 %></h4>
-        <p><%= @workshop.des_des4 %></p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-
-<div class="container">
-<div id="general_info">
-  <h2>Detalles de cómo tomar el taller:</h2>
-  <p><%= @workshop.detalles.html_safe %></p>
-</div>
 </div>
 
 
@@ -181,10 +172,10 @@
 </div>
 
 <div id="bloques">
-<div class="container">
-  <h1>Módulos del taller</h1>
-  <hr>
-  <% @workshop.blocks.each_with_index do |block, i| %>
+  <div class="container">
+    <h1>Módulos del taller</h1>
+    <hr>
+    <% @workshop.blocks.each_with_index do |block, i| %>
     <div class="col-md-4">
       <div id="cerca">
         <h3><%=i+1%></h3>
@@ -193,8 +184,8 @@
         <h4><%=block.duration%></h4>
       </div>
     </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 
 <div class="container">
@@ -203,52 +194,73 @@
 </div>
 
 
-  <div id="precio">
-    <h4>Inversión: $<%=@workshop.precio%></h4>
-    <hr>
-    <p>Nuestro taller empieza el <%=@workshop.fecha.strftime("%x") %></p>
-  </div>
-
-
-
-<div id="minimi">
-  <br>
-  <h3 class="center">Próximos talleres y cursos</h3>
+<div id="precio">
+  <h4>Inversión: $<%=@workshop.precio%></h4>
   <hr>
-  <p>No te los pueden perder</p> <br>
-  <% @workshops.each_with_index do |workshop, i| %>
-<%= link_to workshop do %>
-<div class="row">
-  <div class="col-md-6 col-sm-6">
-    <div id="mini" class="n<%=i+1%>">
-      <h4><%= workshop.nombre %></h4>
-      <p class="white"><%= workshop.fecha.strftime("%x") %></p>
-    </div>
-  </div>
-  <% end %>
-<% end %>
-
-
-  </div>
+  <p>Nuestro taller empieza el <%=@workshop.fecha.strftime("%x") %></p>
 </div>
 
+<div class="container">
+  <div class="center">
+    <% if @workshop.q_ic1.present? %>
+    <br><br>
+    <%= link_to "Descargar PDF del taller", @workshop.q_ic1_url, class: "button button_red" %>
+    <% end %>
+    <br><br>
+  </div>
 
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="Photo3Modal" role="dialog">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h5>No me lo quiero perder</h5>
-                <hr class="lefty">
-                <h3 class="izquierdo"></h3>
-                <br>
-                 <%= render 'maex' %>   
-            </div>
+  <div id="minimi">
+    <br>
+    <h3 class="center">Próximos talleres y cursos</h3>
+    <hr>
+    <p>No te los pueden perder</p> <br>
+    <% @workshops.each_with_index do |workshop, i| %>
+    <%= link_to workshop do %>
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div id="mini" class="n<%=i+1%>">
+          <h4><%= workshop.nombre %></h4>
+          <p class="white"><%= workshop.fecha.strftime("%x") %></p>
         </div>
+      </div>
+      <% end %>
+      <% end %>
+
+
     </div>
+  </div>
+
+
+  <div id="final">
+    <h3>Deseas recibir más información del taller?</h3>
+    <div id="contactito2">
+      <%= form_for @contact do |f| %>
+      <%= f.email_field :email, required: true, placeholder: "Déjanos tu correo electrónico" %>
+      <div class="actions">
+        <%= f.submit "Quiero saber más", class: "button button_red" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="Photo3Modal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h5>No me lo quiero perder</h5>
+          <hr class="lefty">
+          <h3 class="izquierdo"></h3>
+          <br>
+          <%= render 'maex' %>   
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+
+
 </div>
-<!--  -->
