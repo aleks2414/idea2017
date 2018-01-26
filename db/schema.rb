@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180118144308) do
+ActiveRecord::Schema.define(version: 20180126162911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,9 +98,13 @@ ActiveRecord::Schema.define(version: 20180118144308) do
     t.string   "des_des3"
     t.string   "des_tit4"
     t.string   "des_des4"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "slug"
+    t.string   "fechas"
+    t.string   "titulos"
+    t.string   "descripciones"
+    t.string   "keywords"
   end
 
   add_index "workshops", ["slug"], name: "index_workshops_on_slug", unique: true, using: :btree

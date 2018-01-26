@@ -18,6 +18,8 @@
 
 			<%= f.text_field :profile, required: true, placeholder: "Nombre de tu empresa" %>
 
+			<%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
+
 			y mi rol es
 			<%= f.text_field :city, required: true, placeholder: "Escribe el rol que tienes" %>
 

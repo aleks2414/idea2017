@@ -13,6 +13,12 @@ class WorkshopsController < ApplicationController
   def show
     @contact = Contact.new
     @workshops = Workshop.where("fecha > ?", @workshop.fecha).order('id ASC').limit(2)
+
+prepare_meta_tags(title: @workshop.titulos,
+  description: @workshop.descripciones, 
+  keywords: @workshop.keywords
+)
+
   end
 
   # GET /workshops/new
@@ -75,6 +81,6 @@ class WorkshopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def workshop_params
-      params.require(:workshop).permit(:nombre, :frase, :fecha, :lugar, :horario, :formato, :precio, :num_meto, :num_dina, :num_herra, :dirigido, :descripcion, :detalles, :expositor, :puesto, :cv, :foto, :test_link, :imagen, :q_tit1, :q_ic1, :q_des1, :q_tit2, :q_ic2, :q_des2, :q_tit3, :q_ic3, :q_des3, :q_tit4, :q_ic4, :q_des4, :des_tit1, :des_des1, :des_tit2, :des_des2, :des_tit3, :des_des3, :des_tit4, :des_des4, blocks_attributes: [:id, :title, :content, :duration])
+      params.require(:workshop).permit(:nombre, :frase, :fecha, :lugar, :horario, :formato, :precio, :num_meto, :num_dina, :num_herra, :dirigido, :descripcion, :detalles, :expositor, :puesto, :cv, :foto, :test_link, :imagen, :q_tit1, :q_ic1, :q_des1, :q_tit2, :q_ic2, :q_des2, :q_tit3, :q_ic3, :q_des3, :q_tit4, :q_ic4, :q_des4, :des_tit1, :des_des1, :des_tit2, :des_des2, :des_tit3, :des_des3, :des_tit4, :des_des4, :fechas, :titulos, :descripciones, :keywords, blocks_attributes: [:id, :title, :content, :duration])
     end
 end

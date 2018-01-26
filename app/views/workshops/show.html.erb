@@ -5,6 +5,7 @@
     <div id="contactito2">
       <%= form_for @contact do |f| %>
       <%= f.email_field :email, required: true, placeholder: "Déjanos tu correo electrónico" %>
+      <%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
       <div class="actions">
         <%= f.submit "Quiero saber más", class: "button button_red" %>
       </div>
@@ -52,25 +53,25 @@
 <div class="container">
   <div id="formato">
     <div class="row">
-      <div class="col-sm-3 col-xs-6 next">
+      <div class="col-sm-3 next">
         <%= image_tag "icon_w-01.png" %>
         <h4>Fecha del taller:</h4>
-        <p><%= @workshop.fecha.strftime("%x") %></p>
+        <p><%= @workshop.fechas %></p>
       </div>
 
-      <div class="col-sm-3 col-xs-6 next">
+      <div class="col-sm-3 next">
         <%= image_tag "icon_w-02.png" %>
         <h4>Lugar del taller:</h4>
         <p><%= @workshop.lugar %></p>
       </div>
 
-      <div class="col-sm-3 col-xs-6 next">
+      <div class="col-sm-3 next">
         <%= image_tag "icon_w-03.png" %>
         <h4>Horario del taller:</h4>
         <p><%= @workshop.horario %></p>
       </div>
 
-      <div class="col-sm-3 col-xs-6 next">
+      <div class="col-sm-3 next">
         <%= image_tag "icon_w-04.png" %>
         <h4>Formato del taller:</h4>
         <p><%= @workshop.formato %></p>
@@ -197,7 +198,7 @@
 <div id="precio">
   <h4>Inversión: $<%=@workshop.precio%></h4>
   <hr>
-  <p>Nuestro taller empieza el <%=@workshop.fecha.strftime("%x") %></p>
+  <p>Nuestro taller empieza el <%=@workshop.fechas %></p>
 </div>
 
 <div class="container">
@@ -213,14 +214,14 @@
     <br>
     <h3 class="center">Próximos talleres y cursos</h3>
     <hr>
-    <p>No te los pueden perder</p> <br>
+    <p>No te los puedes perder</p> <br>
     <% @workshops.each_with_index do |workshop, i| %>
     <%= link_to workshop do %>
     <div class="row">
       <div class="col-md-6 col-sm-6">
         <div id="mini" class="n<%=i+1%>">
           <h4><%= workshop.nombre %></h4>
-          <p class="white"><%= workshop.fecha.strftime("%x") %></p>
+          <p class="white"><%= workshop.fechas %></p>
         </div>
       </div>
       <% end %>
@@ -236,6 +237,7 @@
     <div id="contactito2">
       <%= form_for @contact do |f| %>
       <%= f.email_field :email, required: true, placeholder: "Déjanos tu correo electrónico" %>
+      <%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
       <div class="actions">
         <%= f.submit "Quiero saber más", class: "button button_red" %>
       </div>

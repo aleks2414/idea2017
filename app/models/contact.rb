@@ -5,6 +5,7 @@ class Contact < MailForm::Base
 	attribute :phone,     		:validate => false
 	attribute :profile, 		  :validate => false
 	attribute :service, 			:validate => false
+	attribute :donde, 			:validate => false
 	attribute :city,    			:validate => false
 	attribute :comments, 			:validate => false
 	attribute :nickname, 			:captcha => true

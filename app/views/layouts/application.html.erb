@@ -110,6 +110,7 @@
                         <div class="col-sm-6">
                             <h5><strong>Empresa:</strong></h5>
                             <%= f.text_field :profile, required: true, placeholder: "Nombre de tu empresa" %>
+                            <%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
                         </div>
                         <div class="col-sm-6">
                             <h5><strong>Rol:</strong></h5>
@@ -177,6 +178,7 @@
                                 <h5><strong>Email:</strong></h5>
                                 <%= f.email_field :email, required: true, placeholder: "Ej. nuevo@mimail.com" %>
                             </div>
+                            <%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
 
                             <div class="col-sm-6">
                                 <h5><strong>Teléfono:</strong></h5>
@@ -257,6 +259,7 @@
         <div id="contactito">
         <%= form_for @contact do |f| %>
             <%= f.email_field :email, required: true, placeholder: "a@a.com" %>
+            <%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
             <button type="submit" name="commit" class="button_blue float_right"><span class="fa fa-paper-plane"></span></button>
         <% end %>
         </div>

@@ -14,14 +14,34 @@
 <div id="formarios">
   <div class="field">
     <%= f.label :nombre_de_taller %><br>
-    <%= f.text_field :nombre %>
+    <%= f.text_field :nombre, required: true %>
   </div>
 
   <div class="field">
     <%= f.label :frase_pegadora %><br>
-    <%= f.text_field :frase %>
+    <%= f.text_field :frase, required: true %>
   </div>
 
+</div>
+
+<div id="formarios">
+  <h5 class="center">SEO</h5>
+  <hr>
+  <div class="field">
+    <%= f.label :título_SEO %><br>
+    <%= f.text_field :titulos, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descripción_SEO %><br>
+    <%= f.text_field :descripciones, required: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Keywords_SEO %><br>
+    <p>Seperar por comas</p>
+    <%= f.text_field :keywords, required: true %>
+  </div>
 </div>
 
 <div id="formarios">
@@ -30,7 +50,14 @@
   <div class="col-md-6">
   <div class="field">
     <%= f.label :fecha_de_taller %><br>
-    <%= f.date_field :fecha %>
+    <%= f.text_field :fechas %>
+  </div>
+  </div>
+
+  <div class="col-md-6">
+  <div class="field">
+    <%= f.label :fecha_comparación_para_otros_talleres %><br>
+    <%= f.date_field :fecha, required: true %>
   </div>
   </div>
   
