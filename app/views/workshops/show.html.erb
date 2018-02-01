@@ -114,7 +114,7 @@
 <div class="container">
   <div id="general_info">
     <h2>¿A quién va dirigido?</h2>
-    <p><%=@workshop.dirigido %></p> <br>
+    <p><%=@workshop.dirigido.html_safe %></p> <br>
 
     <h2>Descripción del Taller</h2>
     <p><%=@workshop.descripcion %></p>
