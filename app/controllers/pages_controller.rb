@@ -42,6 +42,10 @@ prepare_meta_tags(title: "Transformación digital | Idearia Lab Agencia de Innov
 
 end
 
+def guate
+  @contact = Contact.new
+end 
+
 def idearia_lab
   @contact = Contact.new
 

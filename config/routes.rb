@@ -10,6 +10,7 @@ get '/modelo_de_innovacion/entrenamos' => 'pages#entrenamos'
 get '/nosotros/equipo' => 'pages#equipo'
 get '/nosotros/casos_de_exito' => 'pages#casos_exito'
 get '/nosotros/herramientas' => 'pages#herramientas'
+get '/taller_unisbs' => 'pages#guate'
 
 resources :contacts, only: [:new, :create]
 mount Ckeditor::Engine => '/ckeditor'
