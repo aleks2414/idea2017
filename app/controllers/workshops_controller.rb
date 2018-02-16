@@ -9,7 +9,13 @@ class WorkshopsController < ApplicationController
 
   prepare_meta_tags(title: "Academy | Idearia Lab Agencia de Innovación Latinoamericana",
   description: "Aprende a hacer innovación. Diseña estrategia, lidera equipos, aplica el proceso y transmite cultura a través de nuestra suite de innovación.", 
-  keywords: %w[Enseñamos-innovación hacemos-innovación conferencias-de-innovación talleres-de-innovación taller-de-estrategia-de-innovación taller-de-equipos-de-innovación taller-de-procesos-de-innovación taller-de-cultura-de-innovación taller-de-diseño-de-experiencia-de-cliente taller-de-diseño-de-nuevos-productos-y-servicios taller-de-diseño-de-nuevas-líneas-de-negocio taller-de-diseño-de-modelo-de-negocio taller-de-design-thinking taller-de-lean-startup taller-de-innovación-colaborativa taller-de-prototipado taller-de-planeación-estratégica taller-de-sprint-design]
+  keywords: %w[Enseñamos-innovación hacemos-innovación conferencias-de-innovación talleres-de-innovación taller-de-estrategia-de-innovación taller-de-equipos-de-innovación taller-de-procesos-de-innovación taller-de-cultura-de-innovación taller-de-diseño-de-experiencia-de-cliente taller-de-diseño-de-nuevos-productos-y-servicios taller-de-diseño-de-nuevas-líneas-de-negocio taller-de-diseño-de-modelo-de-negocio taller-de-design-thinking taller-de-lean-startup taller-de-innovación-colaborativa taller-de-prototipado taller-de-planeación-estratégica taller-de-sprint-design],
+  og: {
+        site_name: "Academy",
+        title: "Academy | Idearia Lab Agencia de Innovación Latinoamericana",
+        description: "Aprende a hacer innovación. Diseña estrategia, lidera equipos, aplica el proceso y transmite cultura a través de nuestra suite de innovación.",
+        type: 'website'
+      }
 )
     
   end
