@@ -5,7 +5,7 @@
     <div id="contactito2">
       <%= form_for @contact do |f| %>
       <%= f.email_field :email, required: true, placeholder: "Déjanos tu correo electrónico" %>
-      <%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
+      <%= f.text_field :donde, :value => "#{params[:controller]} - #{request.original_url}", class: "hidden" %>
       <div class="actions">
         <%= f.submit "Quiero saber más", class: "button button_red" %>
       </div>
@@ -237,7 +237,7 @@
     <div id="contactito2">
       <%= form_for @contact do |f| %>
       <%= f.email_field :email, required: true, placeholder: "Déjanos tu correo electrónico" %>
-      <%= f.text_field :donde, :value => "#{params[:controller]}-#{params[:action]}", class: "hidden" %>
+      <%= f.text_field :donde, :value => "#{params[:controller]} - #{request.original_url}", class: "hidden" %>
       <div class="actions">
         <%= f.submit "Quiero saber más", class: "button button_red" %>
       </div>
