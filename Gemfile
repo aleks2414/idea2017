@@ -31,6 +31,8 @@ gem "figaro"
 gem "fog-aws"
 gem "ckeditor"
 gem "cocoon"
+gem "prawnto_2", :require => "prawnto"
+gem 'prawn-table'
 
 gem 'rails_12factor', group: :production
 

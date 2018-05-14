@@ -1065,11 +1065,11 @@ hr.grenne {
   height: 300px;
   background-repeat: no-repeat;
   text-align: center;
-  background-image: image-url("alberto-2.png");
+  background-image: image-url("alberto-1.png");
 }
 
 .alberto:hover {
-  background-image: image-url("alberto-1.png");
+  background-image: image-url("alberto-2.png");
 }
 
 .marce {
@@ -1166,6 +1166,68 @@ hr.grenne {
 
 .joseh:hover {
   background-image: image-url("iconins-13.png");
+}
+
+/*nuevos*/
+
+.axel {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("axel-01.png");
+}
+
+.axel:hover {
+  background-image: image-url("axel-02.png");
+}
+
+.frida {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("frida-01.png");
+}
+
+.frida:hover {
+  background-image: image-url("frida-02.png");
+}
+
+.pam {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("pam-01.png");
+}
+
+.pam:hover {
+  background-image: image-url("pam-02.png");
+}
+
+.roberto {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("roberto-01.png");
+}
+
+.roberto:hover {
+  background-image: image-url("roberto-02.png");
+}
+
+.ruthy {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-image: image-url("ruthy-01.png");
+}
+
+.ruthy:hover {
+  background-image: image-url("ruthy-02.png");
 }
 
 .modal-content {
@@ -1452,5 +1514,12 @@ select {
   padding: 30px 0;
   input {
     border: solid .7px #555 !important;
+  }
+}
+
+
+#boby {
+  img {
+    width: 100%,
   }
 }
