@@ -1,0 +1,43 @@
+<%= form_for(@case) do |f| %>
+  <% if @case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+      <% @case.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre, required: true %>
+  </div>
+  <div class="field">
+    <%= f.label :reto %><br>
+    <%= f.text_field :reto %>
+  </div>
+  <div class="field">
+    <%= f.label :solucion %><br>
+    <%= f.text_area :solucion %>
+  </div>
+  <div class="field">
+    <%= f.label :resultados %><br>
+    <%= f.text_area :resultados %>
+  </div>
+  <div class="field">
+    <%= f.label :exito_imagen %><br>
+    <%= f.file_field :exito_imagen %>
+  </div>
+
+  <div class="field">
+    <%= f.label :logo %><br>
+    <%= f.file_field :loguito %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "button button_red" %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<div id="casos">
+  <div class="container">
+    <h5>Casos de éxito</h5>
+    <hr class="lefty">
+    <h3>Empresas que se atrevieron</h3>
+    <p>No somos una simple agencia. El equipo de Idearia Lab entiende profundamente las necesidades de las organizaciones y logra proporcionar el valor más alto para ellas: la innovación.</p>
+
+<div class="row">
+  <% @cases.each_with_index do |caso, i| %>
+    <div class="col-md-3 col-sm-6">
+      <div id="casito">
+      <%= image_tag caso.loguito %>
+      <%= link_to "Aprende más", case_path(caso), class: "button button_blue2"%>
+    </div>
+  </div>
+  <% end %>
+
+</div>
+  </div>
+</div>

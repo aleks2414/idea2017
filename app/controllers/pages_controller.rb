@@ -72,6 +72,7 @@ end
 
 def idearia_lab
   @contact = Contact.new
+  @cases = Case.all
 
 prepare_meta_tags(title: "Nosotros | Idearia Lab Agencia de Innovación Latinoamericana",
   description: "No somos una simple agencia. Entendemos las necesidades de las organizaciones latinoamericanas como nadie y nuestro impacto en la región lo demuestra.", 

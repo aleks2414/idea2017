@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  reto: MyString
+  solucion: MyText
+  resultados: MyText
+  exito_imagen: MyString
+
+two:
+  nombre: MyString
+  reto: MyString
+  solucion: MyText
+  resultados: MyText
+  exito_imagen: MyString

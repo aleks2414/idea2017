@@ -424,73 +424,17 @@
 		<p>No somos una simple agencia. El equipo de Idearia Lab entiende profundamente las necesidades de las organizaciones y logra proporcionar el valor más alto para ellas: la innovación.</p>
 
 <div class="row">
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso09.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#InstaModal">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso01.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConvaModal2">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso05.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#CruzModal">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso02.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ThelsaModal">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso03.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#TractorModal">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso04.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#MasterModal">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso06.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#BroseModal">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso07.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#PraxairModal">Aprende más</button>
-		</div>
-	</div>
-
-		<div class="col-md-3 col-sm-6">
-			<div id="casito">
-			<%= image_tag "caso08.png" %>
-			<button type="button" class="button button_blue2" data-toggle="modal" data-target="#ConagraModal">Aprende más</button>
-		</div>
-	</div>
-
-
+  <% @cases.each_with_index do |caso, i| %>
+    <div class="col-md-3 col-sm-6">
+      <div id="casito">
+      <%= image_tag caso.loguito %>
+      <%= link_to "Aprende más", case_path(caso), class: "button button_blue2"%>
+    </div>
+  </div>
+  <% end %>
 
 </div>
+
 	</div>
 </div>
 

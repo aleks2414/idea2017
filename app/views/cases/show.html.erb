@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-2">
+      <div class="modal-body">
+                <h5>Casos de éxito</h5>
+                <hr class="lefty">
+                <h3 class="izquierdo"><%= @case.nombre %></h3>
+                <br>
+                <% if @case.reto.present? %>
+                <h5 class="left">Reto:</h5>
+                <p class="left"><%=@case.reto %></p>
+                <% end %>
+
+                <% if @case.reto.present? %>
+                <h5 class="left">Solución:</h5>
+                <p class="left"><%=@case.solucion %></p>
+                <% end %>
+
+                <% if @case.reto.present? %>
+                <h5 class="left">Resultados:</h5>
+                <p class="left"><%=@case.resultados %></p>
+                <% end %>
+                <div id="boby">
+                <%= image_tag @case.exito_imagen %>
+                </div>
+
+                <button type="button" class="button button_blue2 left" data-toggle="modal" data-target="#PhotoModal">Más información!</button>
+                <!-- <button type="button" class="button button_red" data-toggle="modal" data-target="#PhotoModal"> Conoce más</button> -->
+      </div>
+    </div>
+  </div>
+</div>
